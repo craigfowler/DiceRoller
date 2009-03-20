@@ -1,0 +1,37 @@
+﻿<UserCombinePreferences version="1.0" filename="/home/craig/projects/Diceroller/Diceroller.mds">
+  <Files>
+    <File name="src/DiceGroup_Members.cs" line="83" column="6" />
+  </Files>
+  <Views>
+    <ViewMemento id="ProjectPad">
+      <Node expanded="True">
+        <Node name="Diceroller" expanded="True">
+          <Node name="src" expanded="True">
+            <Node name="roller-plugins" expanded="True" />
+            <Node name="DiceGroup_Members.cs" selected="True" />
+          </Node>
+          <Node name="tests" expanded="True" />
+        </Node>
+      </Node>
+    </ViewMemento>
+    <ViewMemento id="ClassPad">
+      <Node expanded="True">
+        <Option id="ShowProjects" value="True" />
+        <Option id="NestedNamespaces" value="False" />
+        <Option id="PublicApiOnly" value="False" />
+        <Option id="GroupByType" value="True" />
+        <Option id="GroupByAccess" value="False" />
+        <Node name="Diceroller" expanded="True">
+          <Node name="CraigFowler.Diceroller" expanded="True" />
+        </Node>
+      </Node>
+    </ViewMemento>
+    <ViewMemento id="MonoDevelop.NUnit.TestPad">
+      <Node expanded="True" />
+    </ViewMemento>
+  </Views>
+  <Properties>
+    <Property key="ActiveWindow" value="/home/craig/projects/Diceroller/src/DiceGroup_Members.cs" />
+    <Property key="ActiveConfiguration" value="Debug" />
+  </Properties>
+</UserCombinePreferences>

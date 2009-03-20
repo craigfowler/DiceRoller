@@ -1,0 +1,46 @@
+<Project name="Diceroller" fileversion="2.0" Description="A dice roller for several gamesystems" DefaultNamespace="CraigFowler.Diceroller" newfilesearch="OnLoadAutoInsert" language="C#" clr-version="Net_2_0" ctype="DotNetProject">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Debug" assembly="Diceroller" />
+      <Build debugmode="True" target="Library" />
+      <Execution runwithwarnings="True" consolepause="True" runtime="MsNet" clr-version="Net_2_0" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" definesymbols="DEBUG" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+    <Configuration name="Release" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Release" assembly="Diceroller" />
+      <Build debugmode="False" target="Library" />
+      <Execution runwithwarnings="True" consolepause="True" runtime="MsNet" clr-version="Net_2_0" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+  </Configurations>
+  <Contents>
+    <File name="." subtype="Directory" buildaction="Compile" />
+    <File name="Diceroller.userprefs" subtype="Code" buildaction="Nothing" />
+    <File name="Diceroller.usertasks" subtype="Code" buildaction="Nothing" />
+    <File name="src/BasicRoller.cs" subtype="Code" buildaction="Compile" />
+    <File name="tests/BasicDice.cs" subtype="Code" buildaction="Compile" />
+    <File name="tests/SR4Dice.cs" subtype="Code" buildaction="Compile" />
+    <File name="tests/FudgeDice.cs" subtype="Code" buildaction="Compile" />
+    <File name="tests/DnDStats.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/RoundingMethod.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/RoundingOptions.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/roller-plugins" subtype="Directory" buildaction="Compile" />
+    <File name="src/roller-plugins/DnDRoller.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/roller-plugins/FudgeRoller.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/roller-plugins/Shadowrun4Roller.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/roller-plugins/DnDStatsRollingMethod.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/roller-plugins/FudgeRating.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/roller-plugins/Shadowrun4Glitch.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/CoreDiceRoller.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/RollingOptions.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/DiceSpecification.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/DiceGroup_Members.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/GroupOperator.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/ExplodingStyle.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/DiceGroup_Constructors.cs" subtype="Code" buildaction="Compile" />
+  </Contents>
+  <References>
+    <ProjectReference type="Gac" localcopy="True" refto="nunit.core, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
+    <ProjectReference type="Gac" localcopy="True" refto="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
+  </References>
+</Project>

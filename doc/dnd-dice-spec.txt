@@ -1,0 +1,66 @@
+The dice rolling spec is whitespace-neutral (all whitespace is stripped before
+the roll is parsed).
+
+[<rolls>#]<dice-spec>
+
+rolls
+  Description
+  ===========
+  Positive integer, the number of results to generate.  If not present then
+  1 roll is assumed.  This is affected by a hard-configured maximum.
+
+dice-spec
+  [+|-][<dice-group>][+|-|x|/][(][<dice-group>][+|-|x|/][<dice-group>][)] ...
+  
+  +|-
+    Description
+    ===========
+    All rolls or modifiers may be positive or negative.  This may be omitted
+    in the first dice specification in a chain (it is assumed that the roll
+    is positive).
+  
+  +|-|x|/
+    Description
+    ===========
+    Simple arithmetic may be performed on dicerolls.  These symbols represent
+    addition, subtraction, multiplication and division respectively.  All dice
+    groups must be separated by at least one of these symbols.  Operators are
+    executed in the standard order of multiplication/division first, then
+    addition/subtraction.
+  
+  ()
+    Description
+    ===========
+    Parentheses surrounding dice groups cause them to be evaluated first, before
+    any other modifiers.  Thus it is possible to alter the normal order of
+    operators.
+  
+  dice-group
+    x
+      Description
+      ===========
+      Positive integer, if followed by the character "d" (case-insensitive)
+      then this is the number of dice rolled.  If not followed by a "d"
+      character then this represents a static modifier to the final result of
+      the roll.  This is affected by a hard-configured maximum.
+      
+    y
+      Description
+      ===========
+      Positive integer, the number of sides on the die to be rolled.  This is
+      affected by a hard-configured maximum.  The percentage symbol: "%" is
+      interpreted as a shorthand for "100".
+    
+    Description
+    ===========
+    A dice group is either a single integer (static number) or two integers
+    separated with the "d" character (a dice roll).  All dice groups are
+    evaluated into integers before they are combined using the operators that
+    separate them.
+  
+  Description
+  ===========
+  The dice spec determines how a group of dice are rolled (or provides a static
+  integer modifier).  A single roll may consist of one or more dice groups,
+  separated by operators.  The number of dice groups allowed is affected by a
+  hard-configured maimum.
