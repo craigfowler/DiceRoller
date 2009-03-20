@@ -5,12 +5,8 @@
   <Views>
     <ViewMemento id="ProjectPad">
       <Node expanded="True">
-        <Node name="Diceroller" expanded="True">
-          <Node name="src" expanded="True">
-            <Node name="roller-plugins" expanded="True" />
-            <Node name="DiceGroup_Members.cs" selected="True" />
-          </Node>
-          <Node name="tests" expanded="True" />
+        <Node name="Diceroller" expanded="True" selected="True">
+          <Node name="src" expanded="True" />
         </Node>
       </Node>
     </ViewMemento>
@@ -18,12 +14,10 @@
       <Node expanded="True">
         <Option id="ShowProjects" value="True" />
         <Option id="NestedNamespaces" value="False" />
+        <Option id="GroupByAccess" value="False" />
         <Option id="PublicApiOnly" value="False" />
         <Option id="GroupByType" value="True" />
-        <Option id="GroupByAccess" value="False" />
-        <Node name="Diceroller" expanded="True">
-          <Node name="CraigFowler.Diceroller" expanded="True" />
-        </Node>
+        <Node name="Diceroller" expanded="True" />
       </Node>
     </ViewMemento>
     <ViewMemento id="MonoDevelop.NUnit.TestPad">
