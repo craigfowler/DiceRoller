@@ -13,12 +13,11 @@ namespace CraigFowler.Diceroller.Plugins
     public DnDRoller() : base()
     { }
     
-    public new string Roll (string diceSpec)
+    public new decimal[] Roll (string diceSpec)
     {
       throw new InvalidOperationException("DnDRoller has no Roll(string) " +
                                           "method");
     }
-
     
     public int[] RollStats(DnDStatsRollingMethod method)
     {

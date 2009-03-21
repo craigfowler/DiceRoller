@@ -1,6 +1,8 @@
 The dice rolling spec is whitespace-neutral (all whitespace is stripped before
 the roll is parsed).
 
+The Specification
+=================
 [<rolls>#]<dice-spec>
 
 rolls
@@ -10,7 +12,7 @@ rolls
   1 roll is assumed.  This is affected by a hard-configured maximum.
 
 dice-spec
-  [+|-][<dice-group>][+|-|x|/][(][<dice-group>][+|-|x|/][<dice-group>][)] ...
+  [+|-][<dice-group>][+|-|x|*|/][(][<dice-group>][+|-|x|/][<dice-group>][)] ...
   
   +|-
     Description
@@ -19,7 +21,7 @@ dice-spec
     in the first dice specification in a chain (it is assumed that the roll
     is positive).
   
-  +|-|x|/
+  +|-|x|*|/
     Description
     ===========
     Simple arithmetic may be performed on dicerolls.  These symbols represent
@@ -27,6 +29,7 @@ dice-spec
     groups must be separated by at least one of these symbols.  Operators are
     executed in the standard order of multiplication/division first, then
     addition/subtraction.
+    Note that "*" and "x" are both acceptable synonyms for multiplication.
   
   ()
     Description
@@ -64,3 +67,24 @@ dice-spec
   integer modifier).  A single roll may consist of one or more dice groups,
   separated by operators.  The number of dice groups allowed is affected by a
   hard-configured maimum.
+
+Rules for Prsing Invalid Specification Strings
+==============================================
+If the following conditions are met, they are dealt with in the way listed:
+* Too many opening brackets
+> Any open brackets are implicitly closed at the end of the string
+
+* Too many closing brackets
+> Any extra ones are ignored/discarded
+
+* Adjacent operation symbols
+> Only the first operation encountered is used, the rest are discarded
+
+* Multiplication/Division at the start of the string
+> Throw an exception with an error message
+
+* Number followed immediately by an open-bracket (without an operation)
+> Throw an exception with an error message
+
+* Invalid characters in the specification
+> Discard any invalid characters and continue

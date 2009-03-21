@@ -18,7 +18,7 @@
     <File name="Diceroller.userprefs" subtype="Code" buildaction="Nothing" />
     <File name="Diceroller.usertasks" subtype="Code" buildaction="Nothing" />
     <File name="src/BasicRoller.cs" subtype="Code" buildaction="Compile" />
-    <File name="tests/BasicDice.cs" subtype="Code" buildaction="Compile" />
+    <File name="tests/SimpleNumbers.cs" subtype="Code" buildaction="Compile" />
     <File name="tests/SR4Dice.cs" subtype="Code" buildaction="Compile" />
     <File name="tests/FudgeDice.cs" subtype="Code" buildaction="Compile" />
     <File name="tests/DnDStats.cs" subtype="Code" buildaction="Compile" />
@@ -40,6 +40,11 @@
     <File name="src/DiceGroup_Constructors.cs" subtype="Code" buildaction="Compile" />
     <File name="bin/Debug/Diceroller.dll.mdb" subtype="Code" buildaction="Nothing" />
     <File name="doc/dnd-dice-spec.txt" subtype="Code" buildaction="Nothing" />
+    <File name="bin/debug.dll.mdb" subtype="Code" buildaction="Nothing" />
+    <File name="tests/TestSpec.cs" subtype="Code" buildaction="Compile" />
+    <File name="tests/RollerOptions.cs" subtype="Code" buildaction="Compile" />
+    <File name="src/DiceGroupDisplay.cs" subtype="Code" buildaction="Compile" />
+    <File name="tests/SpecificationParsing.cs" subtype="Code" buildaction="Compile" />
   </Contents>
   <References>
     <ProjectReference type="Gac" localcopy="True" refto="nunit.core, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />

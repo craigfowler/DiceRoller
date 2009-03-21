@@ -9,6 +9,7 @@ namespace CraigFowler.Diceroller
 {
   public class BasicRoller
   {
+#region settings
     protected static RoundingOptions defaultRounding;
     
     public virtual RoundingMethod Rounding {
@@ -37,13 +38,16 @@ namespace CraigFowler.Diceroller
         defaultRounding.RoundEveryStep = value;
       }
     }
+#endregion
     
+#region constructors
     public BasicRoller()
     {
       defaultRounding = new RoundingOptions();
     }
+#endregion
     
-    public virtual int[] Roll(string diceSpec)
+    public virtual decimal[] Roll(string diceSpec)
     {
       throw new NotImplementedException();
     }

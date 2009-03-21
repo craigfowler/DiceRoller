@@ -5,15 +5,16 @@
 
 using System;
 using NUnit.Framework;
-using CraigFowler.Diceroller;
+using CraigFowler.Diceroller.Plugins;
 
-namespace CraigFowler.Diceroller
+namespace Test.CraigFowler.Diceroller.Plugins
 {
-  [TestFixture()]
+  [Ignore("This test isn't ready yet")]
+  [TestFixture]
   public class DnDStats
   {
     
-    [Test()]
+    [Test]
     public void TestCase()
     {
     }

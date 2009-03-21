@@ -9,12 +9,38 @@ namespace CraigFowler.Diceroller
 {
   internal sealed class DiceSpecification : DiceGroup
   {
+    private int numberOfRolls;
+    
+    public int NumberOfRolls {
+      get {
+        return numberOfRolls;
+      }
+      set {
+        if(value >= 0)
+        {
+          numberOfRolls = value;
+        }
+        else
+        {
+          numberOfRolls = 0;
+        }
+      }
+    }
     
 #region constructors
     internal DiceSpecification() : base()
-    { }
+    {
+      numberOfRolls = 1;
+    }
+#endregion
     
-    internal DiceSpecification(string diceSpec) : base()
+#region staticMembers
+    internal static DiceSpecification Parse(string diceSpec)
+    {
+      return parseDiceSpec(diceSpec);
+    }
+    
+    private static DiceSpecification parseDiceSpec(string diceSpec)
     {
       throw new NotImplementedException();
     }

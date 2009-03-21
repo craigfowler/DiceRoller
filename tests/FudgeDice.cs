@@ -9,11 +9,12 @@ using CraigFowler.Diceroller.Plugins;
 
 namespace Test.CraigFowler.Diceroller.Plugins
 {
-  [TestFixture()]
+  [Ignore("This test isn't ready yet")]
+  [TestFixture]
   public class FudgeDice
   {
     
-    [Test()]
+    [Test]
     public void TestCase()
     {
     }

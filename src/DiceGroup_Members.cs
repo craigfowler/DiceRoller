@@ -17,6 +17,7 @@ namespace CraigFowler.Diceroller
     protected int? numDice;
     protected int? sidesPerDie;
     
+#region properties
     internal List<DiceGroup> Groups {
       get {
         return innerGroups;
@@ -72,16 +73,34 @@ namespace CraigFowler.Diceroller
         options = value;
       }
     }
+#endregion
     
+#region methods
     internal decimal GetValue(out int rollAgainExplosions)
     {
       rollAgainExplosions = 0;
       return calculateValue(ref rollAgainExplosions);
     }
     
+    public override string ToString()
+    {
+      return generateString(DiceGroupDisplay.ParsedSpecification);
+    }
+    
+    public string ToString(DiceGroupDisplay displayOptions)
+    {
+      return generateString(displayOptions);
+    }
+    
+    protected string generateString(DiceGroupDisplay options)
+    {
+      throw new NotImplementedException();
+    }
+    
     protected decimal calculateValue(ref int explosions)
     {
       throw new NotImplementedException();
     }
+#endregion
   }
 }
