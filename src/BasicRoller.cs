@@ -14,10 +14,10 @@ namespace CraigFowler.Diceroller
     
     public virtual RoundingMethod Rounding {
       get {
-        return defaultRounding.Rounding;
+        return defaultRounding.RoundingType;
       }
       set {
-        defaultRounding.Rounding = value;
+        defaultRounding.RoundingType = value;
       }
     }
     

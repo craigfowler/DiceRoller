@@ -21,7 +21,7 @@ namespace Test.CraigFowler.Diceroller
       dividedNumbers                   = new TestSpec("6/2x8", 24m),
       multipliedNumbersWithSynonyms    = new TestSpec("2x2*2x5", 40m),
       simpleNumbersWithOrder           = new TestSpec("2x3+8/2-5", 5m),
-      simpleNumbersWithWhitespace      = new TestSpec(" 1  0 - 6   * 2  ", -2m),
+      simpleNumbersWithWhitespace      = new TestSpec(" 10 - 6   * 2  ", -2m),
       simpleNumbersWithBrackets        = new TestSpec("4*(5-2)", 12m),
       invalidOperation                 = new TestSpec("3**4+8", 20m),
       invalidBrackets1                 = new TestSpec("4*(3+3", 24m),

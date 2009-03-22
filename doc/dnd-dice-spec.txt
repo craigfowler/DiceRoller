@@ -68,9 +68,10 @@ dice-spec
   separated by operators.  The number of dice groups allowed is affected by a
   hard-configured maimum.
 
-Rules for Prsing Invalid Specification Strings
-==============================================
+Rules for Parsing Invalid Specification Strings
+===============================================
 If the following conditions are met, they are dealt with in the way listed:
+
 * Too many opening brackets
 > Any open brackets are implicitly closed at the end of the string
 
@@ -87,4 +88,5 @@ If the following conditions are met, they are dealt with in the way listed:
 > Throw an exception with an error message
 
 * Invalid characters in the specification
-> Discard any invalid characters and continue
+> Discard any invalid characters along with the dice group they appear in
+  and attempt to continue

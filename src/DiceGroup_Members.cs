@@ -10,6 +10,11 @@ namespace CraigFowler.Diceroller
 {
   internal partial class DiceGroup
   {
+#region defaults
+    private const DiceGroupDisplay DEFAULT_PARSING_STYLE =
+      DiceGroupDisplay.ParsedSpecification;
+#endregion
+    
     protected RollingOptions options;
     
     protected List<DiceGroup> innerGroups;
@@ -73,6 +78,25 @@ namespace CraigFowler.Diceroller
         options = value;
       }
     }
+    
+    internal decimal MinimumResult {
+      get {
+        return calculateMinimum();
+      }
+    }
+    
+    internal decimal MaximumResult {
+      get {
+        return calculateMaximum();
+      }
+    }
+    
+    internal decimal MeanResult {
+      get {
+        return calculateMean();
+      }
+    }
+    
 #endregion
     
 #region methods
@@ -84,7 +108,7 @@ namespace CraigFowler.Diceroller
     
     public override string ToString()
     {
-      return generateString(DiceGroupDisplay.ParsedSpecification);
+      return generateString(DEFAULT_PARSING_STYLE);
     }
     
     public string ToString(DiceGroupDisplay displayOptions)
@@ -92,12 +116,36 @@ namespace CraigFowler.Diceroller
       return generateString(displayOptions);
     }
     
-    protected string generateString(DiceGroupDisplay options)
+    protected virtual string generateString(DiceGroupDisplay options)
     {
       throw new NotImplementedException();
     }
     
     protected decimal calculateValue(ref int explosions)
+    {
+      /* As a safety feature, there needs to be a check that exploding dice
+       * won't explode infinitely.
+       * 
+       * That means checking that the exploding threshold is more than the
+       * lowest possible result of the group.
+       * 
+       * Always ignore exploding dice requests if no dice are being rolled (IE:
+       * it's a static number, or the dice setting means that there is no range)
+       */
+      throw new NotImplementedException();
+    }
+    
+    protected decimal calculateMinimum()
+    {
+      throw new NotImplementedException();
+    }
+    
+    protected decimal calculateMaximum()
+    {
+      throw new NotImplementedException();
+    }
+    
+    protected decimal calculateMean()
     {
       throw new NotImplementedException();
     }

@@ -16,7 +16,7 @@ namespace CraigFowler.Diceroller
     public const bool DEFUALT_ROUND_EVERY_STEP = false;
 #endregion
     
-    public RoundingMethod Rounding;
+    public RoundingMethod RoundingType;
     protected int decimalPlaces;
     public bool RoundEveryStep;
     
@@ -38,7 +38,7 @@ namespace CraigFowler.Diceroller
     
     public RoundingOptions()
     {
-      Rounding = DEFAULT_ROUNDING;
+      RoundingType = DEFAULT_ROUNDING;
       RoundingDigits = DEFAULT_DECIMAL_PLACES;
       RoundEveryStep = DEFUALT_ROUND_EVERY_STEP;
     }

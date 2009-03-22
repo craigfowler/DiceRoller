@@ -11,7 +11,7 @@ namespace CraigFowler.Diceroller
   {
     private int numberOfRolls;
     
-    public int NumberOfRolls {
+    internal int NumberOfRolls {
       get {
         return numberOfRolls;
       }
@@ -25,6 +25,11 @@ namespace CraigFowler.Diceroller
           numberOfRolls = 0;
         }
       }
+    }
+    
+    protected override string generateString(DiceGroupDisplay options)
+    {
+      throw new NotImplementedException();
     }
     
 #region constructors
