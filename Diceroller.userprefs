@@ -1,15 +1,19 @@
 ﻿<UserCombinePreferences version="1.0" filename="/home/craig/projects/Diceroller/Diceroller.mds">
   <Files>
-    <File name="tests/RollerOptions.cs" line="24" column="33" />
+    <File name="src/DiceSpecification.cs" line="158" column="76" />
+    <File name="tests/SpecificationParsing.cs" line="202" column="60" />
+    <File name="src/DiceGroup_Constructors.cs" line="185" column="6" />
+    <File name="src/DiceGroup_Members.cs" line="26" column="5" />
   </Files>
   <Views>
     <ViewMemento id="ProjectPad">
       <Node expanded="True">
         <Node name="Diceroller" expanded="True">
-          <Node name="src" expanded="True" />
-          <Node name="tests" expanded="True">
-            <Node name="RollerOptions.cs" selected="True" />
+          <Node name="References" expanded="True" />
+          <Node name="src" expanded="True">
+            <Node name="DiceSpecification.cs" selected="True" />
           </Node>
+          <Node name="tests" expanded="True" />
         </Node>
       </Node>
     </ViewMemento>
@@ -17,25 +21,24 @@
       <Node expanded="True">
         <Option id="ShowProjects" value="True" />
         <Option id="NestedNamespaces" value="False" />
+        <Option id="GroupByAccess" value="False" />
         <Option id="PublicApiOnly" value="False" />
         <Option id="GroupByType" value="True" />
-        <Option id="GroupByAccess" value="False" />
         <Node name="Diceroller" expanded="True">
           <Node name="CraigFowler.Diceroller" expanded="True">
-            <Node name="DiceGroupDisplay" expanded="True" />
-            <Node name="RollingOptions" expanded="True" />
-            <Node name="RoundingOptions" expanded="True" />
+            <Node name="GroupOperator" selected="True" />
           </Node>
-          <Node name="Test.CraigFowler.Diceroller" expanded="True" />
         </Node>
       </Node>
     </ViewMemento>
     <ViewMemento id="MonoDevelop.NUnit.TestPad">
-      <Node expanded="True">
+      <Node expanded="True" selected="True">
         <Node name="Diceroller" expanded="True">
           <Node name="Test" expanded="True">
             <Node name="CraigFowler" expanded="True">
-              <Node name="Diceroller" expanded="True" selected="True" />
+              <Node name="Diceroller" expanded="True">
+                <Node name="SpecificationParsing" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </Node>
@@ -43,7 +46,7 @@
     </ViewMemento>
   </Views>
   <Properties>
-    <Property key="ActiveWindow" value="/home/craig/projects/Diceroller/tests/RollerOptions.cs" />
+    <Property key="ActiveWindow" value="/home/craig/projects/Diceroller/src/DiceSpecification.cs" />
     <Property key="ActiveConfiguration" value="Debug" />
   </Properties>
 </UserCombinePreferences>

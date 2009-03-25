@@ -42,12 +42,23 @@
     <File name="doc/dnd-dice-spec.txt" subtype="Code" buildaction="Nothing" />
     <File name="bin/debug.dll.mdb" subtype="Code" buildaction="Nothing" />
     <File name="tests/TestSpec.cs" subtype="Code" buildaction="Compile" />
-    <File name="tests/RollerOptions.cs" subtype="Code" buildaction="Compile" />
+    <File name="tests/RoundingOptions.cs" subtype="Code" buildaction="Compile" />
     <File name="src/DiceGroupDisplay.cs" subtype="Code" buildaction="Compile" />
     <File name="tests/SpecificationParsing.cs" subtype="Code" buildaction="Compile" />
+    <File name="test-results/Diceroller.mdp-Debug-2009-03-20.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mdp-Debug-2009-03-21.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mdp-Debug-2009-03-22.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mdp.test-cache" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mds-Debug-2009-03-20.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mds-Debug-2009-03-21.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mds-Debug-2009-03-22.xml" subtype="Code" buildaction="Nothing" />
+    <File name="tests/OtherOptions.cs" subtype="Code" buildaction="Compile" />
+    <File name="test-results/Diceroller.mdp-Debug-2009-03-24.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mds-Debug-2009-03-24.xml" subtype="Code" buildaction="Nothing" />
   </Contents>
   <References>
     <ProjectReference type="Gac" localcopy="True" refto="nunit.core, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
     <ProjectReference type="Gac" localcopy="True" refto="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
+    <ProjectReference type="Gac" localcopy="True" refto="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   </References>
 </Project>

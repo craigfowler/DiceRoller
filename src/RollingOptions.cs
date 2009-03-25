@@ -24,11 +24,31 @@ namespace CraigFowler.Diceroller
       get {
         return lowerBound;
       }
+      set {
+        if(value.HasValue && value > 0)
+        {
+          lowerBound = value;
+        }
+        else if(value == null)
+        {
+          lowerBound = null;
+        }
+      }
     }
 
     public Nullable<int> UpperBound {
       get {
         return upperBound;
+      }
+      set {
+        if(value.HasValue && value > 0)
+        {
+          upperBound = value;
+        }
+        else if(value == null)
+        {
+          upperBound = null;
+        }
       }
     }
 
@@ -36,17 +56,40 @@ namespace CraigFowler.Diceroller
       get {
         return explodingThreshold;
       }
+      set {
+        if(value.HasValue && value > 0)
+        {
+          explodingThreshold = value;
+        }
+        else if(value == null)
+        {
+          explodingThreshold = null;
+        }
+      }
     }
 
     public ExplodingStyle ExplodingStyle {
       get {
         return explodingStyle;
       }
+      set {
+        explodingStyle = value;
+      }
     }
 
     public Nullable<int> ExplodingLimit {
       get {
         return explodingLimit;
+      }
+      set {
+        if(value.HasValue && value > 0)
+        {
+          explodingLimit = value;
+        }
+        else if(value == null)
+        {
+          explodingLimit = null;
+        }
       }
     }
 

@@ -17,6 +17,8 @@ namespace Test.CraigFowler.Diceroller
      * wrong and would totally prevent the diceroller from being able to do
      * its job?
      * 
+     * Multiple rolls
+     * 
      * * Check brackets
      * * Check operators
      * * Check that % (on its own) is used as a synonym for 100
@@ -66,7 +68,10 @@ namespace Test.CraigFowler.Diceroller
       leadingMultiplication            = new TestSpec("x20"),
       missingOperation                 = new TestSpec("4+3(4-2)"),
       invalidCharacters                = new TestSpec("2ad6+34", "34"),
-      whitespaceInNumbers              = new TestSpec("3 4+1d4", "34+1d4");
+      whitespaceInNumbers              = new TestSpec("3 4+1d4", "34+1d4"),
+      mutlipleRolls                    = new TestSpec("4#2d6", "4#2d6"),
+      multipleRollsComplex             = new TestSpec("32#3d8*2+20",
+                                                      "32#3d8*2+20");
 #endregion
     
     [Test]
@@ -188,6 +193,20 @@ namespace Test.CraigFowler.Diceroller
     {
       Assert.AreEqual(whitespaceInNumbers.StringResult,
                       DiceSpecification.Parse(whitespaceInNumbers.DiceSpecification));
+    }
+    
+    [Test]
+    public void MultipleRolls()
+    {
+      Assert.AreEqual(mutlipleRolls.StringResult,
+                      DiceSpecification.Parse(mutlipleRolls.DiceSpecification));
+    }
+    
+    [Test]
+    public void MultipleRollsComplex()
+    {
+      Assert.AreEqual(multipleRollsComplex.StringResult,
+                      DiceSpecification.Parse(multipleRollsComplex.DiceSpecification));
     }
   }
 }
