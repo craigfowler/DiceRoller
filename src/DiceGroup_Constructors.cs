@@ -182,6 +182,8 @@ namespace CraigFowler.Diceroller
       numDice = null;
       sidesPerDie = null;
       options = null;
+      storedExplosions = null;
+      storedResult = null;
     }
   }
 }

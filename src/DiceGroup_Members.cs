@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace CraigFowler.Diceroller
 {
@@ -12,15 +13,15 @@ namespace CraigFowler.Diceroller
   {
 #region defaults
     private const DiceGroupDisplay DEFAULT_PARSING_STYLE =
-      DiceGroupDisplay.ParsedSpecification;
+      DiceGroupDisplay.Specification;
 #endregion
     
     protected RollingOptions options;
     
     protected List<DiceGroup> innerGroups;
     protected GroupOperator? groupOperator;
-    protected int? numDice;
-    protected int? sidesPerDie;
+    protected int? numDice, sidesPerDie, storedExplosions;
+    protected decimal? storedResult;
     
 #region properties
     internal List<DiceGroup> Groups {
@@ -49,6 +50,29 @@ namespace CraigFowler.Diceroller
       }
       set {
         groupOperator = value;
+      }
+    }
+    
+    internal bool OperatorIsMultiplication
+    {
+      get {
+        bool output = false;
+        
+        if(groupOperator.HasValue &&
+           (groupOperator.Value == GroupOperator.Multiply ||
+            groupOperator.Value == GroupOperator.Divide))
+        {
+          output = true;
+        }
+        
+        return output;
+      }
+    }
+    
+    internal bool HasOperator
+    {
+      get {
+        return groupOperator.HasValue;
       }
     }
 
@@ -118,7 +142,80 @@ namespace CraigFowler.Diceroller
     
     protected virtual string generateString(DiceGroupDisplay options)
     {
-      throw new NotImplementedException();
+      StringBuilder output = new StringBuilder();
+      
+      bool showResult =
+        (options & DiceGroupDisplay.Results) == DiceGroupDisplay.Results;
+      bool showSpec = 
+        (options & DiceGroupDisplay.Specification) == DiceGroupDisplay.Specification;
+      
+      if(showSpec)
+      {
+        // Render the group's operator if it has one (not if a dice spec)
+        if(groupOperator.HasValue)
+        {
+          switch(groupOperator.Value)
+          {
+          case GroupOperator.Add:
+            output.Append("+");
+            break;
+          case GroupOperator.Divide:
+            output.Append("/");
+            break;
+          case GroupOperator.Multiply:
+            output.Append("*");
+            break;
+          case GroupOperator.Subtract:
+            output.Append("-");
+            break;
+          }
+        }
+        
+        // Render an opening bracket if we need one
+        if(innerGroups.Count > 0)
+        {
+          output.Append("(");
+          output.Append(renderNumeric(showResult));
+          
+          // Render all of the contained groups
+          foreach(DiceGroup group in innerGroups)
+          {
+            output.Append(group.ToString(options));
+          }
+          
+          output.Append(")");
+        }
+        else
+        {
+          output.Append(renderNumeric(showResult));
+        }
+      }
+      
+      return output.ToString();
+    }
+    
+    protected string renderNumeric(bool showResult)
+    {
+      string output = String.Empty;
+      
+      if(numDice.HasValue && sidesPerDie.HasValue)
+      {
+        output = String.Format("{0}d{1}",
+                               numDice.Value,
+                               sidesPerDie.Value);
+      }
+      else if(numDice.HasValue)
+      {
+        output = numDice.Value.ToString();
+      }
+      
+      if(showResult && output != String.Empty)
+      {
+        int explosions = 0;
+        output += String.Format(":{0}", calculateValue(ref explosions));
+      }
+      
+      return output;
     }
     
     protected decimal calculateValue(ref int explosions)

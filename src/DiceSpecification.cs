@@ -4,17 +4,26 @@
  */
 
 using System;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace CraigFowler.Diceroller
 {
   internal sealed class DiceSpecification : DiceGroup
   {
+    /* A parse-able thing is:
+     * Leading operator (optional)
+     * Open Bracket (optional)
+     * Some dice or a number (optional)
+     * Close bracket (optional)
+     */
+    
 #region constants
     private const string
       MATCH_WHITESPACE = @"\s",
       MATCH_NUMBER_OF_ROLLS = @"^(\d+)#",
-      MATCH_DICE_GROUP = @"([-+*x/]*)(\()?(((\d*)[Dd]([%\d]+))|(\d+))(\))?";
+      MATCH_DICE_GROUP = @"([-+*x/]*)(\()?(((\d*)[Dd]([%\d]+))|(\d+))?(\))?";
 #endregion
     private int numberOfRolls;
     
@@ -34,9 +43,43 @@ namespace CraigFowler.Diceroller
       }
     }
     
-    protected override string generateString(DiceGroupDisplay options)
+    protected override string generateString (DiceGroupDisplay options)
     {
-      throw new NotImplementedException();
+      StringBuilder output = new StringBuilder();
+      
+      if((options & DiceGroupDisplay.Specification) ==
+         DiceGroupDisplay.Specification)
+      {
+        if(numberOfRolls > 1)
+        {
+          output.Append(String.Format("{0}#", numberOfRolls.ToString()));
+        }
+        
+        if(numberOfRolls > 0)
+        {
+          foreach(DiceGroup group in innerGroups)
+          {
+            output.Append(group.ToString(options));
+          }
+        }
+      }
+      
+      return output.ToString();
+    }
+    
+    internal decimal[] Roll()
+    {
+      List<decimal> output = new List<decimal>();
+      int rollsPending = numberOfRolls, rollAgainExplosions;
+      
+      while(rollsPending > 0)
+      {
+        output.Add(this.GetValue(out rollAgainExplosions));
+        rollsPending --;
+        rollsPending += rollAgainExplosions;
+      }
+      
+      return output.ToArray();
     }
     
 #region constructors
@@ -49,50 +92,105 @@ namespace CraigFowler.Diceroller
 #region staticMembers
     internal static DiceSpecification Parse(string diceSpec)
     {
-      return parseDiceSpec(diceSpec);
-    }
-    
-    private static DiceSpecification parseDiceSpec(string diceSpec)
-    {
+      DiceSpecification output;
+      Queue<Match> groupMatches;
+      Regex matchDiceGroups = new Regex(MATCH_DICE_GROUP);
+      
       /* Parse the basics of the dice spec (strip whitespace and get the number
        * of rolls
        */
-      DiceSpecification output;
-      DiceGroup parsedGroup;
-      MatchCollection groupMatch;
-      Regex matchDiceGroups = new Regex(MATCH_DICE_GROUP);
       output = parseSpecBasics(ref diceSpec);
       
 #if DEBUG
-      Console.WriteLine("Spec: '{0}'", diceSpec);
+      Console.WriteLine("\n{1} rolls, spec: '{0}'",
+                        diceSpec,
+                        output.NumberOfRolls);
 #endif
       
       /* Now, the dice specification is ready for parsing groups.
-       * Use a regex to match the dice groups in the specification, then parse
-       * each of them, using the groups in tht regex to extract the relevant
-       * parts.
+       * Use a regex to match the dice groups in the specification, then put
+       * them into a queue of regex matches.
        */
-      groupMatch = matchDiceGroups.Matches(diceSpec);
-      foreach(Match group in groupMatch)
+      groupMatches = new Queue<Match>();
+      foreach(Match group in matchDiceGroups.Matches(diceSpec))
       {
-        parsedGroup = parseGroup(group);
-        // TODO: Still to do is to add the parsed dice group to the output
+        if(group.Value != String.Empty)
+        {
+          groupMatches.Enqueue(group);
+        }
       }
       
-      // throw new NotImplementedException();
+      output = (DiceSpecification) parseGroupMatches(groupMatches,
+                                                     (DiceGroup) output);
+      
+      return output;
+    }
+    
+    private static DiceGroup parseGroupMatches(Queue<Match> matches,
+                                               DiceGroup input)
+    {
+      bool enter, exit = false, first = true;
+      DiceGroup output = input, parsedGroup;
+      Match match;
+      
+      while(matches.Count > 0 &&
+            (exit == false || output is DiceSpecification))
+      {
+        match = matches.Dequeue();
+        
+#if DEBUG
+      Console.WriteLine("Raw group: {0}", match.Value);
+#endif
+        
+        // Parse the match as a dice group
+        parsedGroup = parseDiceGroupFromMatch(match, out enter, out exit);
+        
+        if(!first && !parsedGroup.HasOperator && !exit)
+        {
+          throw new FormatException("Missing operator, likely an invalid " +
+                                    "dice specification");
+        }
+        
+        if(first &&
+           output is DiceSpecification &&
+           parsedGroup.OperatorIsMultiplication)
+        {
+          throw new FormatException("Dice string must not begin with " +
+                                    "multiplication or division");
+        }
+        
+        /* If we have passed an open-bracket (and not a close-bracket) then
+         * we need to call this method recursively on the new group we just
+         * created.
+         */
+        if(enter)
+        {
+          parsedGroup = parseGroupMatches(matches, parsedGroup);
+        }
+        
+        // Add that newly found dice group to the output (as a child)
+        output.Groups.Add(parsedGroup);
+        first = false;
+      }
+      
       return output;
     }
     
     /* Uses a regex match instance to parse and return a dice group.
      */
-    private static DiceGroup parseGroup(Match input)
+    private static DiceGroup parseDiceGroupFromMatch(Match input,
+                                                     out bool enter,
+                                                     out bool exit)
     {
       DiceGroup output = new DiceGroup();
+      enter = false;
+      exit = false;
       
       // The stuff we need to extract from the regex match:
       GroupOperator? precedingOperator = null;
       bool openingParenthesis = false, closingParenthesis = false;
       int? numberOfDice = null, sidesPerDie = null, staticNumber = null;
+      string operatorString;
       
       /* There are up to 8 group matches in this match:
        * 1     the operator            (always present)
@@ -108,23 +206,27 @@ namespace CraigFowler.Diceroller
        */
       
       // Parse the operator
-      switch(input.Groups[1].Value)
+      operatorString = input.Groups[1].Value;
+      if(operatorString.Length > 0)
       {
-      case "+":
-        precedingOperator = GroupOperator.Add;
-        break;
-      case "-":
-        precedingOperator = GroupOperator.Subtract;
-        break;
-      case "*":
-        precedingOperator = GroupOperator.Multiply;
-        break;
-      case "x":
-        precedingOperator = GroupOperator.Multiply;
-        break;
-      case "/":
-        precedingOperator = GroupOperator.Divide;
-        break;
+        switch(operatorString.Substring(0, 1))
+        {
+        case "+":
+          precedingOperator = GroupOperator.Add;
+          break;
+        case "-":
+          precedingOperator = GroupOperator.Subtract;
+          break;
+        case "*":
+          precedingOperator = GroupOperator.Multiply;
+          break;
+        case "x":
+          precedingOperator = GroupOperator.Multiply;
+          break;
+        case "/":
+          precedingOperator = GroupOperator.Divide;
+          break;
+        }
       }
       
       // Parse any parentheses in this group
@@ -142,9 +244,10 @@ namespace CraigFowler.Diceroller
       {
         staticNumber = Convert.ToInt32(input.Groups[7].Value);
       }
-      else
+      else if(input.Groups[6].Success)
       {
-        if(input.Groups[5].Success)
+        if(input.Groups[5].Success &&
+           input.Groups[5].Value != String.Empty)
         {
           numberOfDice = Convert.ToInt32(input.Groups[5].Value);
         }
@@ -152,25 +255,35 @@ namespace CraigFowler.Diceroller
         {
           numberOfDice = 1;
         }
-        sidesPerDie = Convert.ToInt32(input.Groups[6].Value);
-      }
-      
-      // TODO:  This needs refactoring so that it can be called recursively
-      
-#if DEBUG
-      for(int i = 1; i < input.Groups.Count; i++)
-      {
-        if(input.Groups[i].Success)
+        if(input.Groups[6].Value.Substring(0, 1) == "%")
         {
-          Console.WriteLine("Group: '{0}',  RegexGroup {1}: '{2}'",
-                            input.Value,
-                            i,
-                            input.Groups[i].Value);
+          sidesPerDie = 100;
+        }
+        else
+        {
+          sidesPerDie = Convert.ToInt32(input.Groups[6].Value);
         }
       }
-#endif
       
-      throw new NotImplementedException();
+      if(precedingOperator.HasValue)
+      {
+        output.Operator = precedingOperator.Value;
+      }
+      
+      if(staticNumber.HasValue)
+      {
+        output.NumberOfDice = staticNumber;
+        output.SidesPerDie = null;
+      }
+      else if(numberOfDice.HasValue && sidesPerDie.HasValue)
+      {
+        output.NumberOfDice = numberOfDice;
+        output.SidesPerDie = sidesPerDie;
+      }
+      
+      enter = (openingParenthesis && !closingParenthesis);
+      exit = (closingParenthesis && !openingParenthesis);
+      
       return output;
     }
     

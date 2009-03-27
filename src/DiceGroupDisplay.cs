@@ -10,7 +10,7 @@ namespace CraigFowler.Diceroller
   [Flags]
   public enum DiceGroupDisplay : int
   {
-    ParsedSpecification      = 1,
-    Results                  = 2
+    Specification  = 1,
+    Results        = 2
   }
 }

@@ -31,7 +31,7 @@ namespace CraigFowler.Diceroller
     
     private decimal[] rollDice(DiceSpecification spec)
     {
-      throw new NotImplementedException();
+      return spec.Roll();
     }
     
 #region constructor

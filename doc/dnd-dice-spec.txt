@@ -88,5 +88,7 @@ If the following conditions are met, they are dealt with in the way listed:
 > Throw an exception with an error message
 
 * Invalid characters in the specification
-> Discard any invalid characters along with the dice group they appear in
-  and attempt to continue
+> Throw an exception with an error message
+
+* Invalid specification in the format: 2d6d8
+> Throw an exception with an error message

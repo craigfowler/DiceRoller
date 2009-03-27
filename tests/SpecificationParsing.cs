@@ -71,98 +71,102 @@ namespace Test.CraigFowler.Diceroller
       whitespaceInNumbers              = new TestSpec("3 4+1d4", "34+1d4"),
       mutlipleRolls                    = new TestSpec("4#2d6", "4#2d6"),
       multipleRollsComplex             = new TestSpec("32#3d8*2+20",
-                                                      "32#3d8*2+20");
+                                                      "32#3d8*2+20"),
+      lotsOfBrackets                   = new TestSpec("5+(((5-4)*2))+9",
+                                                      "5+(((5-4)*2))+9"),
+      redundantBrackets                = new TestSpec("4+(2d6)+(9)", "4+2d6+9"),
+      invalidSpecTwoDs                 = new TestSpec("10d6d8");
 #endregion
     
     [Test]
     public void PlainNumber()
     {
       Assert.AreEqual(plainNumber.StringResult,
-                      DiceSpecification.Parse(plainNumber.DiceSpecification));
+                      DiceSpecification.Parse(plainNumber.DiceSpecification).ToString());
     }
     
     [Test]
     public void AddedNumbers()
     {
       Assert.AreEqual(addedNumbers.StringResult,
-                      DiceSpecification.Parse(addedNumbers.DiceSpecification));
+                      DiceSpecification.Parse(addedNumbers.DiceSpecification).ToString());
     }
     
     [Test]
     public void ManyOperators()
     {
       Assert.AreEqual(manyOperators.StringResult,
-                      DiceSpecification.Parse(manyOperators.DiceSpecification));
+                      DiceSpecification.Parse(manyOperators.DiceSpecification).ToString());
     }
     
     [Test]
     public void Brackets()
     {
       Assert.AreEqual(brackets.StringResult,
-                      DiceSpecification.Parse(brackets.DiceSpecification));
+                      DiceSpecification.Parse(brackets.DiceSpecification).ToString());
     }
     
     [Test]
     public void Whitespace()
     {
       Assert.AreEqual(whitespace.StringResult,
-                      DiceSpecification.Parse(whitespace.DiceSpecification));
+                      DiceSpecification.Parse(whitespace.DiceSpecification).ToString());
     }
     
     [Test]
     public void NormalDiceRoll()
     {
       Assert.AreEqual(normalDiceRoll.StringResult,
-                      DiceSpecification.Parse(normalDiceRoll.DiceSpecification));
+                      DiceSpecification.Parse(normalDiceRoll.DiceSpecification).ToString());
     }
     
     [Test]
     public void MultipleDiceRoll()
     {
       Assert.AreEqual(multipleDiceRoll.StringResult,
-                      DiceSpecification.Parse(multipleDiceRoll.DiceSpecification));
+                      DiceSpecification.Parse(multipleDiceRoll.DiceSpecification).ToString());
     }
     
     [Test]
     public void DPercentage()
     {
       Assert.AreEqual(dPercentage.StringResult,
-                      DiceSpecification.Parse(dPercentage.DiceSpecification));
+                      DiceSpecification.Parse(dPercentage.DiceSpecification).ToString());
     }
     
     [Test]
     public void OmitNumberOfDice()
     {
       Assert.AreEqual(omitNumberOfDice.StringResult,
-                      DiceSpecification.Parse(omitNumberOfDice.DiceSpecification));
+                      DiceSpecification.Parse(omitNumberOfDice.DiceSpecification).ToString());
     }
     
     [Test]
     public void DoubleBrackets()
     {
       Assert.AreEqual(doubleBrackets.StringResult,
-                      DiceSpecification.Parse(doubleBrackets.DiceSpecification));
+                      DiceSpecification.Parse(doubleBrackets.DiceSpecification).ToString());
     }
     
     [Test]
     public void TooManyOpeningBrackets()
     {
       Assert.AreEqual(tooManyOpeningBrackets.StringResult,
-                      DiceSpecification.Parse(tooManyOpeningBrackets.DiceSpecification));
+                      DiceSpecification.Parse(tooManyOpeningBrackets.DiceSpecification).ToString());
     }
     
     [Test]
     public void TooManyClosingBrackets()
     {
       Assert.AreEqual(tooManyClosingBrackets.StringResult,
-                      DiceSpecification.Parse(tooManyClosingBrackets.DiceSpecification));
+                      DiceSpecification.Parse(tooManyClosingBrackets.DiceSpecification).ToString());
     }
     
     [Test]
     public void AdjacentOperations()
     {
       Assert.AreEqual(adjacentOperations.StringResult,
-                      DiceSpecification.Parse(adjacentOperations.DiceSpecification));
+                      DiceSpecification.Parse(adjacentOperations.DiceSpecification).ToString());
     }
     
     [ExpectedException(typeof(FormatException),
@@ -170,43 +174,71 @@ namespace Test.CraigFowler.Diceroller
     [Test]
     public void LeadingMultiplication()
     {
+#if DEBUG
+      string output =
+        DiceSpecification.Parse(leadingMultiplication.DiceSpecification).ToString();
+      Console.WriteLine("LeadingMultiplication: '{0}'", output);
+#endif
       DiceSpecification.Parse(leadingMultiplication.DiceSpecification);
     }
     
     [ExpectedException(typeof(FormatException),
-      "Missing operation before opening parenthesis")]
+      "Missing operator, likely an invalid dice specification")]
     [Test]
     public void MissingOperation()
     {
       DiceSpecification.Parse(missingOperation.DiceSpecification);
     }
     
+    [ExpectedException(typeof(FormatException),
+      "Missing operator, likely an invalid dice specification")]
     [Test]
     public void InvalidCharacters()
     {
-      Assert.AreEqual(invalidCharacters.StringResult,
-                      DiceSpecification.Parse(invalidCharacters.DiceSpecification));
+      DiceSpecification.Parse(invalidCharacters.DiceSpecification);
     }
     
     [Test]
     public void WhitespaceInNumbers()
     {
       Assert.AreEqual(whitespaceInNumbers.StringResult,
-                      DiceSpecification.Parse(whitespaceInNumbers.DiceSpecification));
+                      DiceSpecification.Parse(whitespaceInNumbers.DiceSpecification).ToString());
     }
     
     [Test]
     public void MultipleRolls()
     {
       Assert.AreEqual(mutlipleRolls.StringResult,
-                      DiceSpecification.Parse(mutlipleRolls.DiceSpecification));
+                      DiceSpecification.Parse(mutlipleRolls.DiceSpecification).ToString());
     }
     
     [Test]
     public void MultipleRollsComplex()
     {
       Assert.AreEqual(multipleRollsComplex.StringResult,
-                      DiceSpecification.Parse(multipleRollsComplex.DiceSpecification));
+                      DiceSpecification.Parse(multipleRollsComplex.DiceSpecification).ToString());
+    }
+    
+    [Test]
+    public void LotsOfBrackets()
+    {
+      Assert.AreEqual(lotsOfBrackets.StringResult,
+                      DiceSpecification.Parse(lotsOfBrackets.DiceSpecification).ToString());
+    }
+    
+    [Test]
+    public void RedundantBrackets()
+    {
+      Assert.AreEqual(redundantBrackets.StringResult,
+                      DiceSpecification.Parse(redundantBrackets.DiceSpecification).ToString());
+    }
+    
+    [ExpectedException(typeof(FormatException),
+      "Missing operator, likely an invalid dice specification")]
+    [Test]
+    public void InvalidSpecWithTwoDCharacters()
+    {
+      DiceSpecification.Parse(invalidSpecTwoDs.DiceSpecification);
     }
   }
 }
