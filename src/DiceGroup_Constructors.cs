@@ -184,6 +184,7 @@ namespace CraigFowler.Diceroller
       options = null;
       storedExplosions = null;
       storedResult = null;
+      randomiser = new Random();
     }
   }
 }

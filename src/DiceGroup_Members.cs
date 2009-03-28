@@ -22,6 +22,7 @@ namespace CraigFowler.Diceroller
     protected GroupOperator? groupOperator;
     protected int? numDice, sidesPerDie, storedExplosions;
     protected decimal? storedResult;
+    protected Random randomiser;
     
 #region properties
     internal List<DiceGroup> Groups {
@@ -127,7 +128,13 @@ namespace CraigFowler.Diceroller
     internal decimal GetValue(out int rollAgainExplosions)
     {
       rollAgainExplosions = 0;
-      return calculateValue(ref rollAgainExplosions);
+      return calculateValue(ref rollAgainExplosions, false);
+    }
+    
+    internal decimal GetValue(out int rollAgainExplosions, bool reRoll)
+    {
+      rollAgainExplosions = 0;
+      return calculateValue(ref rollAgainExplosions, reRoll);
     }
     
     public override string ToString()
@@ -220,6 +227,15 @@ namespace CraigFowler.Diceroller
     
     protected decimal calculateValue(ref int explosions)
     {
+      return calculateValue(ref explosions, false);
+    }
+    
+    protected decimal calculateValue(ref int explosions,
+                                     bool ignoreCachedResults)
+    {
+      int diceResult;
+      decimal output;
+      
       /* As a safety feature, there needs to be a check that exploding dice
        * won't explode infinitely.
        * 
@@ -229,7 +245,36 @@ namespace CraigFowler.Diceroller
        * Always ignore exploding dice requests if no dice are being rolled (IE:
        * it's a static number, or the dice setting means that there is no range)
        */
+      
+      /* Remember to use the cached results (and number of explosions)
+       * if they are available and we have not been told to ignore them
+       */
+      
+      diceResult = calculateRoll();
+      
+      // TODO:  Write this next!
+      
       throw new NotImplementedException();
+      return output;
+    }
+    
+    protected int calculateRoll()
+    {
+      int lBound, uBound, output;
+      
+      lBound = options.LowerBound.HasValue?
+        options.LowerBound.Value : 1;
+      uBound = options.UpperBound.HasValue?
+        options.UpperBound.Value : sidesPerDie.Value;
+      
+      output = 0;
+      
+      for(int i = 0; i < numDice.Value; i++)
+      {
+        output += randomiser.Next(lBound, uBound);
+      }
+      
+      return output;
     }
     
     protected decimal calculateMinimum()

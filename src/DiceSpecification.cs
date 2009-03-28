@@ -43,6 +43,16 @@ namespace CraigFowler.Diceroller
       }
     }
     
+    internal decimal[] Roll()
+    {
+      return roll(false);
+    }
+    
+    internal decimal[] ReRoll()
+    {
+      return roll(true);
+    }
+    
     protected override string generateString (DiceGroupDisplay options)
     {
       StringBuilder output = new StringBuilder();
@@ -67,14 +77,14 @@ namespace CraigFowler.Diceroller
       return output.ToString();
     }
     
-    internal decimal[] Roll()
+    private decimal[] roll(bool reRoll)
     {
       List<decimal> output = new List<decimal>();
       int rollsPending = numberOfRolls, rollAgainExplosions;
       
       while(rollsPending > 0)
       {
-        output.Add(this.GetValue(out rollAgainExplosions));
+        output.Add(this.GetValue(out rollAgainExplosions, reRoll));
         rollsPending --;
         rollsPending += rollAgainExplosions;
       }

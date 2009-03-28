@@ -1,16 +1,14 @@
 ﻿<UserCombinePreferences version="1.0" filename="/home/craig/projects/Diceroller/Diceroller.mds">
   <Files>
-    <File name="src/DiceSpecification.cs" line="162" column="22" />
-    <File name="src/DiceGroup_Members.cs" line="124" column="17" />
+    <File name="src/DiceGroup_Members.cs" line="249" column="33" />
   </Files>
   <Views>
     <ViewMemento id="ProjectPad">
       <Node expanded="True">
         <Node name="Diceroller" expanded="True">
           <Node name="src" expanded="True">
-            <Node name="DiceSpecification.cs" selected="True" />
+            <Node name="DiceGroup_Members.cs" selected="True" />
           </Node>
-          <Node name="tests" expanded="True" />
         </Node>
       </Node>
     </ViewMemento>
@@ -18,9 +16,16 @@
       <Node expanded="True">
         <Option id="ShowProjects" value="True" />
         <Option id="NestedNamespaces" value="False" />
-        <Option id="GroupByAccess" value="False" />
         <Option id="PublicApiOnly" value="False" />
         <Option id="GroupByType" value="True" />
+        <Option id="GroupByAccess" value="False" />
+        <Node name="Diceroller" expanded="True">
+          <Node name="CraigFowler.Diceroller" expanded="True">
+            <Node name="BasicRoller" expanded="True" />
+            <Node name="CoreDiceRoller" expanded="True" />
+            <Node name="DiceSpecification" expanded="True" />
+          </Node>
+        </Node>
       </Node>
     </ViewMemento>
     <ViewMemento id="MonoDevelop.NUnit.TestPad">
@@ -29,7 +34,7 @@
           <Node name="Test" expanded="True">
             <Node name="CraigFowler" expanded="True">
               <Node name="Diceroller" expanded="True">
-                <Node name="SpecificationParsing" expanded="True" selected="True" />
+                <Node name="SimpleNumbers" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -38,7 +43,7 @@
     </ViewMemento>
   </Views>
   <Properties>
-    <Property key="ActiveWindow" value="/home/craig/projects/Diceroller/src/DiceSpecification.cs" />
+    <Property key="ActiveWindow" value="/home/craig/projects/Diceroller/src/DiceGroup_Members.cs" />
     <Property key="ActiveConfiguration" value="Debug" />
   </Properties>
 </UserCombinePreferences>
