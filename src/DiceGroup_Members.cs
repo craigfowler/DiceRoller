@@ -233,8 +233,13 @@ namespace CraigFowler.Diceroller
     protected decimal calculateValue(ref int explosions,
                                      bool ignoreCachedResults)
     {
-      int diceResult;
       decimal output;
+      List<DiceResult> results;
+      int groupExplosions;
+      
+#if DEBUG
+      Console.WriteLine("\nRolling Spec: '{0}'", this.ToString());
+#endif
       
       /* As a safety feature, there needs to be a check that exploding dice
        * won't explode infinitely.
@@ -250,11 +255,104 @@ namespace CraigFowler.Diceroller
        * if they are available and we have not been told to ignore them
        */
       
-      diceResult = calculateRoll();
+      results = new List<DiceResult>();
+      
+      if(numDice.HasValue)
+      {
+        DiceResult newResult = new DiceResult();
+        newResult.Value = calculateRoll();
+        results.Add(newResult);
+        // TODO:  Check for add-on explosions
+      }
+      
+      for(int i = 0; i < innerGroups.Count; i++)
+      {
+        DiceResult newResult = new DiceResult();
+        newResult.Value = innerGroups[i].GetValue(out groupExplosions,
+                                                  ignoreCachedResults);
+        if(i > 0)
+        {
+          newResult.Operator = innerGroups[i].Operator;
+        }
+        else if(i == 0 &&
+                innerGroups[0].HasOperator &&
+                innerGroups[0].Operator == GroupOperator.Add)
+        {
+          newResult.Value = 0 + newResult.Value;
+        }
+        else if(i == 0 &&
+                innerGroups[0].HasOperator &&
+                innerGroups[0].Operator == GroupOperator.Subtract)
+        {
+          newResult.Value = 0 - newResult.Value;
+        }
+        
+        results.Add(newResult);
+        explosions += groupExplosions;
+      }
+      
+      for(int i = 1; i < results.Count; i++)
+      {
+        if(results[i].Operator == GroupOperator.Multiply)
+        {
+          results[i-1].Value = results[i-1].Value * results[i].Value;
+          results.RemoveAt(i);
+          i--;
+          // TODO:  If we are rounding after every step, then round here!
+        }
+        else if(results[i].Operator == GroupOperator.Divide)
+        {
+          results[i-1].Value = results[i-1].Value / results[i].Value;
+          results.RemoveAt(i);
+          i--;
+          // TODO:  If we are rounding after every step, then round here!
+        }
+      }
+      
+      for(int i = 1; i < results.Count; i++)
+      {
+        if(results[i].Operator == GroupOperator.Add)
+        {
+          results[i-1].Value = results[i-1].Value + results[i].Value;
+          results.RemoveAt(i);
+          i--;
+          // TODO:  If we are rounding after every step, then round here!
+        }
+        else if(results[i].Operator == GroupOperator.Subtract)
+        {
+          results[i-1].Value = results[i-1].Value - results[i].Value;
+          results.RemoveAt(i);
+          i--;
+          // TODO:  If we are rounding after every step, then round here!
+        }
+      }
+      
+      if(results.Count == 1)
+      {
+        output = results[0].Value;
+      }
+      else if(results.Count > 1)
+      {
+        string message = String.Format("Something is wrong here, I have {0} "+
+                                       "results when I was expecting 1 or 0.",
+                                       results.Count);
+        throw new InvalidOperationException(message);
+      }
+      else
+      {
+        output = 0;
+      }
+      
+      /* TODO: If the result of this dice group is equal to or above the
+       * exploding threshold, then add an explosion on if we are using roll
+       * again explosions
+       */
       
       // TODO:  Write this next!
       
-      throw new NotImplementedException();
+#if DEBUG
+      Console.WriteLine("Output for this group is {0}", output);
+#endif
       return output;
     }
     
@@ -262,16 +360,35 @@ namespace CraigFowler.Diceroller
     {
       int lBound, uBound, output;
       
-      lBound = options.LowerBound.HasValue?
-        options.LowerBound.Value : 1;
-      uBound = options.UpperBound.HasValue?
-        options.UpperBound.Value : sidesPerDie.Value;
+#if DEBUG
+      /*
+      Console.WriteLine("Has numDice: {0}, has sidesPerDie: {1}",
+                        numDice.HasValue,
+                        sidesPerDie.HasValue);
+      */
+#endif
       
-      output = 0;
-      
-      for(int i = 0; i < numDice.Value; i++)
+      if(sidesPerDie.HasValue)
       {
-        output += randomiser.Next(lBound, uBound);
+        lBound = options.LowerBound.HasValue?
+          options.LowerBound.Value : 1;
+        uBound = options.UpperBound.HasValue?
+          options.UpperBound.Value : sidesPerDie.Value;
+        
+        output = 0;
+        
+        for(int i = 0; i < numDice.Value; i++)
+        {
+          output += randomiser.Next(lBound, uBound);
+        }
+      }
+      else if(numDice.HasValue)
+      {
+        output = numDice.Value;
+      }
+      else
+      {
+        output = 0;
       }
       
       return output;

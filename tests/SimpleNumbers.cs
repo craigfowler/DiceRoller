@@ -41,93 +41,93 @@ namespace Test.CraigFowler.Diceroller
     public void SimpleNumber()
     {
       Assert.AreEqual(simpleNumber.NumericResult,
-                      roller.Roll(simpleNumber.DiceSpecification));
+                      roller.Roll(simpleNumber.DiceSpecification)[0]);
     }
     
     [Test]
     public void Addition()
     {
       Assert.AreEqual(manySimpleNumbers.NumericResult,
-                      roller.Roll(manySimpleNumbers.DiceSpecification));
+                      roller.Roll(manySimpleNumbers.DiceSpecification)[0]);
     }
     
     [Test]
     public void Subtraction()
     {
       Assert.AreEqual(negativeSimpleNumber.NumericResult,
-                      roller.Roll(negativeSimpleNumber.DiceSpecification));
+                      roller.Roll(negativeSimpleNumber.DiceSpecification)[0]);
     }
     
     [Test]
     public void Multiplication()
     {
       Assert.AreEqual(multipliedNumbers.NumericResult,
-                      roller.Roll(multipliedNumbers.DiceSpecification));
+                      roller.Roll(multipliedNumbers.DiceSpecification)[0]);
     }
     
     [Test]
     public void Division()
     {
       Assert.AreEqual(dividedNumbers.NumericResult,
-                      roller.Roll(dividedNumbers.DiceSpecification));
+                      roller.Roll(dividedNumbers.DiceSpecification)[0]);
     }
     
     [Test]
     public void MultiplicationSynonyms()
     {
       Assert.AreEqual(multipliedNumbersWithSynonyms.NumericResult,
-                      roller.Roll(multipliedNumbersWithSynonyms.DiceSpecification));
+                      roller.Roll(multipliedNumbersWithSynonyms.DiceSpecification)[0]);
     }
     
     [Test]
     public void OrderOfOperations()
     {
       Assert.AreEqual(simpleNumbersWithOrder.NumericResult,
-                      roller.Roll(simpleNumbersWithOrder.DiceSpecification));
+                      roller.Roll(simpleNumbersWithOrder.DiceSpecification)[0]);
     }
     
     [Test]
     public void WhitespaceIgnored()
     {
       Assert.AreEqual(simpleNumbersWithWhitespace.NumericResult,
-                      roller.Roll(simpleNumbersWithWhitespace.DiceSpecification));
+                      roller.Roll(simpleNumbersWithWhitespace.DiceSpecification)[0]);
     }
     
     [Test]
     public void Brackets()
     {
       Assert.AreEqual(simpleNumbersWithBrackets.NumericResult,
-                      roller.Roll(simpleNumbersWithBrackets.DiceSpecification));
+                      roller.Roll(simpleNumbersWithBrackets.DiceSpecification)[0]);
     }
     
     [Test]
     public void InvalidOperationRecovered()
     {
       Assert.AreEqual(invalidOperation.NumericResult,
-                      roller.Roll(invalidOperation.DiceSpecification));
+                      roller.Roll(invalidOperation.DiceSpecification)[0]);
     }
     
     [Test]
     public void BracketsNotClosedRecovered()
     {
       Assert.AreEqual(invalidBrackets1.NumericResult,
-                      roller.Roll(invalidBrackets1.DiceSpecification));
+                      roller.Roll(invalidBrackets1.DiceSpecification)[0]);
     }
     
     [Test]
     public void BracketsTooManyClosedRecovered()
     {
       Assert.AreEqual(invalidBrackets2.NumericResult,
-                      roller.Roll(invalidBrackets2.DiceSpecification));
+                      roller.Roll(invalidBrackets2.DiceSpecification)[0]);
     }
     
     [Test]
     [ExpectedException(typeof(DivideByZeroException),
-                       "Error: Division by zero!")]
+                       "Division by zero")]
     public void DivisionByZeroError()
     {
       Assert.AreEqual(divideByZero.NumericResult,
-                      roller.Roll(divideByZero.DiceSpecification));
+                      roller.Roll(divideByZero.DiceSpecification)[0]);
     }
   }
 }

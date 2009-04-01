@@ -186,5 +186,13 @@ namespace CraigFowler.Diceroller
       storedResult = null;
       randomiser = new Random();
     }
+    
+#region containedClasses
+    protected class DiceResult
+    {
+      public decimal Value;
+      public GroupOperator Operator;
+    }
+#endregion
   }
 }

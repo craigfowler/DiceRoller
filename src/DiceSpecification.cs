@@ -112,9 +112,11 @@ namespace CraigFowler.Diceroller
       output = parseSpecBasics(ref diceSpec);
       
 #if DEBUG
+      /*
       Console.WriteLine("\n{1} rolls, spec: '{0}'",
                         diceSpec,
                         output.NumberOfRolls);
+      */
 #endif
       
       /* Now, the dice specification is ready for parsing groups.
@@ -149,7 +151,9 @@ namespace CraigFowler.Diceroller
         match = matches.Dequeue();
         
 #if DEBUG
+      /*
       Console.WriteLine("Raw group: {0}", match.Value);
+      */
 #endif
         
         // Parse the match as a dice group
@@ -178,8 +182,22 @@ namespace CraigFowler.Diceroller
           parsedGroup = parseGroupMatches(matches, parsedGroup);
         }
         
+#if DEBUG
+        /*
+        Console.WriteLine("Exit: {0}, Number of Dice: {1}, Is Spec: {2}",
+                          exit,
+                          parsedGroup.SidesPerDie.HasValue,
+                          output is DiceSpecification);
+        */
+#endif
+        
         // Add that newly found dice group to the output (as a child)
-        output.Groups.Add(parsedGroup);
+        if(!exit ||
+           parsedGroup.NumberOfDice.HasValue ||
+           !(output is DiceSpecification))
+        {
+          output.Groups.Add(parsedGroup);
+        }
         first = false;
       }
       
