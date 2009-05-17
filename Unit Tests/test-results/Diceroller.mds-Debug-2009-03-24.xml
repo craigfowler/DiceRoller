@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2009-03-24T23:17:47+00:00</TestDate>
+      <Status>Failure Ignored</Status>
+      <TotalFailures>46</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>3</TotalIgnored>
+      <Time />
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-03-24T23:18:22+00:00</TestDate>
+      <Status>Failure Ignored</Status>
+      <TotalFailures>46</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>3</TotalIgnored>
+      <Time />
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-03-24T23:38:11</TestDate>
+      <Status>Failure Ignored</Status>
+      <TotalFailures>46</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>3</TotalIgnored>
+      <Time />
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-03-24T23:42:00</TestDate>
+      <Status>Failure Ignored</Status>
+      <TotalFailures>46</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>3</TotalIgnored>
+      <Time />
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-03-24T23:42:18</TestDate>
+      <Status>Failure Ignored</Status>
+      <TotalFailures>46</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>3</TotalIgnored>
+      <Time />
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-03-24T23:44:22</TestDate>
+      <Status>Failure Ignored</Status>
+      <TotalFailures>46</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>3</TotalIgnored>
+      <Time />
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-03-24T23:44:41</TestDate>
+      <Status>Failure Ignored</Status>
+      <TotalFailures>46</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>3</TotalIgnored>
+      <Time />
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-03-24T23:46:22</TestDate>
+      <Status>Failure Ignored</Status>
+      <TotalFailures>48</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>3</TotalIgnored>
+      <Time />
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-03-24T23:49:09</TestDate>
+      <Status>Failure Ignored</Status>
+      <TotalFailures>48</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>3</TotalIgnored>
+      <Time />
+    </UnitTestResult>
+  </Results>
+  <Tests />
+</TestRecord>

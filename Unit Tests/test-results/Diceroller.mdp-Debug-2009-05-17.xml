@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2009-05-17T23:56:53</TestDate>
+      <Status>Success Failure Ignored</Status>
+      <TotalFailures>2</TotalFailures>
+      <TotalSuccess>39</TotalSuccess>
+      <TotalIgnored>14</TotalIgnored>
+      <Time />
+      <Message>Child test failed</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="Test">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2009-05-17T23:56:53</TestDate>
+          <Status>Success Failure Ignored</Status>
+          <TotalFailures>2</TotalFailures>
+          <TotalSuccess>39</TotalSuccess>
+          <TotalIgnored>14</TotalIgnored>
+          <Time />
+          <Message>Child test failed</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="CraigFowler">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2009-05-17T23:56:53</TestDate>
+              <Status>Success Failure Ignored</Status>
+              <TotalFailures>2</TotalFailures>
+              <TotalSuccess>39</TotalSuccess>
+              <TotalIgnored>14</TotalIgnored>
+              <Time />
+              <Message>Child test failed</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="Diceroller">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2009-05-17T23:56:53</TestDate>
+                  <Status>Success Failure Ignored</Status>
+                  <TotalFailures>2</TotalFailures>
+                  <TotalSuccess>39</TotalSuccess>
+                  <TotalIgnored>14</TotalIgnored>
+                  <Time />
+                  <Message>Child test failed</Message>
+                </UnitTestResult>
+              </Results>
+              <Tests>
+                <TestRecord Name="OtherOptions">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2009-05-17T23:56:53</TestDate>
+                      <Status>Success Failure</Status>
+                      <TotalFailures>1</TotalFailures>
+                      <TotalSuccess>4</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>Child test failed</Message>
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="DontExplodeIfThresholdIsTooLow">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>1</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>  Must be greater than one (lower bound is 2)
+  Expected: greater than 1m
+  But was:  1m
+</Message>
+                          <StackTrace>  at NUnit.Framework.Assert.That (System.Object actual, NUnit.Framework.Constraints.Constraint constraint, System.String message, System.Object[] args) [0x00000] 
+  at NUnit.Framework.Assert.Greater (Decimal arg1, Decimal arg2, System.String message, System.Object[] args) [0x00000] 
+  at NUnit.Framework.Assert.Greater (Decimal arg1, Decimal arg2, System.String message) [0x00000] 
+  at Test.CraigFowler.Diceroller.OtherOptions.DontExplodeIfThresholdIsTooLow () [0x00044] in /home/craig/projects/Diceroller/tests/OtherOptions.cs:83 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] </StackTrace>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="DontExplodeNumbers">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.02ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="ExplodingAddOn">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.02ms</Message>
+                          <ConsoleOutput>Add-on-exploding: i=' 1', result=' 4'
+Add-on-exploding: i=' 2', result=' 1'
+Add-on-exploding: i=' 3', result=' 2'
+Add-on-exploding: i=' 4', result=' 4'
+Add-on-exploding: i=' 5', result=' 1'
+Add-on-exploding: i=' 6', result=' 1'
+Add-on-exploding: i=' 7', result=' 1'
+Add-on-exploding: i=' 8', result=' 3'
+Add-on-exploding: i=' 9', result=' 3'
+Add-on-exploding: i='10', result=' 3'
+Add-on-exploding: i='11', result=' 1'
+Add-on-exploding: i='12', result=' 1'
+Add-on-exploding: i='13', result=' 1'
+Add-on-exploding: i='14', result=' 3'
+Add-on-exploding: i='15', result=' 3'
+Add-on-exploding: i='16', result=' 3'
+Add-on-exploding: i='17', result=' 3'
+Add-on-exploding: i='18', result=' 1'
+Add-on-exploding: i='19', result=' 1'
+Add-on-exploding: i='20', result=' 2'
+</ConsoleOutput>
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="ExplodingRollAgain">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.02ms</Message>
+                          <ConsoleOutput>Add-on-exploding: i=' 1', results=' 1'
+Add-on-exploding: i=' 2', results=' 1'
+Add-on-exploding: i=' 3', results=' 1'
+Add-on-exploding: i=' 4', results=' 1'
+Add-on-exploding: i=' 5', results=' 1'
+Add-on-exploding: i=' 6', results=' 1'
+Add-on-exploding: i=' 7', results=' 1'
+Add-on-exploding: i=' 8', results=' 1'
+Add-on-exploding: i=' 9', results=' 1'
+Add-on-exploding: i='10', results=' 1'
+Add-on-exploding: i='11', results=' 1'
+Add-on-exploding: i='12', results=' 1'
+Add-on-exploding: i='13', results=' 1'
+Add-on-exploding: i='14', results=' 1'
+Add-on-exploding: i='15', results=' 1'
+Add-on-exploding: i='16', results=' 1'
+Add-on-exploding: i='17', results=' 1'
+Add-on-exploding: i='18', results=' 1'
+Add-on-exploding: i='19', results=' 1'
+Add-on-exploding: i='20', results=' 1'
+</ConsoleOutput>
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="OptionsOnIndividualDiceGroups">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+                <TestRecord Name="Plugins">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2009-05-17T23:56:53</TestDate>
+                      <Status>Ignored</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>3</TotalIgnored>
+                      <Time />
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="DnDStats">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>This test isn't ready yet</Message>
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="TestCase">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2009-05-17T23:56:53</TestDate>
+                              <Status>Ignored</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>1</TotalIgnored>
+                              <Time />
+                              <Message>This test isn't ready yet</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                    <TestRecord Name="FudgeDice">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>This test isn't ready yet</Message>
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="TestCase">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2009-05-17T23:56:53</TestDate>
+                              <Status>Ignored</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>1</TotalIgnored>
+                              <Time />
+                              <Message>This test isn't ready yet</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                    <TestRecord Name="SR4Dice">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>This test isn't ready yet</Message>
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="TestCase">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2009-05-17T23:56:53</TestDate>
+                              <Status>Ignored</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>1</TotalIgnored>
+                              <Time />
+                              <Message>This test isn't ready yet</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+                <TestRecord Name="RoundingTests">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2009-05-17T23:56:53</TestDate>
+                      <Status>Ignored</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>11</TotalIgnored>
+                      <Time />
+                      <Message />
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="LowerBound">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RoundAwayFromZeroDecimal">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RoundAwayFromZeroInteger">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RoundDownDecimal">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RoundDownInteger">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RoundEveryStep">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RoundToEvenDecimal">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RoundToEvenInteger">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RoundUpDecimal">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RoundUpInteger">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="UpperBound">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Ignored</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>1</TotalIgnored>
+                          <Time />
+                          <Message>Test ignored</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+                <TestRecord Name="SimpleNumbers">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2009-05-17T23:56:53</TestDate>
+                      <Status>Success</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>13</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="Addition">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="Brackets">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="BracketsNotClosedRecovered">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="BracketsTooManyClosedRecovered">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="Division">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="DivisionByZeroError">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="InvalidOperationRecovered">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="Multiplication">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="MultiplicationSynonyms">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="OrderOfOperations">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="SimpleNumber">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="Subtraction">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="WhitespaceIgnored">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+                <TestRecord Name="SpecificationParsing">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2009-05-17T23:56:53</TestDate>
+                      <Status>Success</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>22</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="AddedNumbers">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="AdjacentOperations">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="Brackets">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="DoubleBrackets">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="DPercentage">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="InvalidCharacters">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="InvalidSpecWithTwoDCharacters">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="LeadingMultiplication">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="LotsOfBrackets">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="ManyOperators">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="MissingOperation">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="MultipleDiceRoll">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="MultipleRolls">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="MultipleRollsComplex">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="NormalDiceRoll">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="OmitNumberOfDice">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="PlainNumber">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="RedundantBrackets">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="TooManyClosingBrackets">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="TooManyOpeningBrackets">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="Whitespace">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="WhitespaceInNumbers">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+                <TestRecord Name="Stats">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2009-05-17T23:56:53</TestDate>
+                      <Status>Failure</Status>
+                      <TotalFailures>1</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>Child test failed</Message>
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="PlainNumber">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-05-17T23:56:53</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>1</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                          <StackTrace>  at CraigFowler.Diceroller.DiceGroup.calculateMinimum () [0x00000] in /home/craig/projects/Diceroller/src/DiceGroup_Members.cs:403 
+  at CraigFowler.Diceroller.DiceGroup.get_MinimumResult () [0x00000] in /home/craig/projects/Diceroller/src/DiceGroup_Members.cs:109 
+  at CraigFowler.Diceroller.CoreDiceRoller.getMinimum (CraigFowler.Diceroller.DiceSpecification spec) [0x0000c] in /home/craig/projects/Diceroller/src/CoreDiceRoller.cs:77 
+  at CraigFowler.Diceroller.CoreDiceRoller.Minimum (System.String specString) [0x00007] in /home/craig/projects/Diceroller/src/CoreDiceRoller.cs:41 
+  at Test.CraigFowler.Diceroller.Stats.PlainNumber () [0x00000] in /home/craig/projects/Diceroller/tests/Stats.cs:56 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] </StackTrace>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>
