@@ -29,9 +29,64 @@ namespace CraigFowler.Diceroller
       return rollDice(spec);
     }
     
+    internal decimal Minimum(DiceSpecification spec)
+    {
+      return getMinimum(spec);
+    }
+    
+    internal decimal Minimum(string specString)
+    {
+      DiceSpecification spec;
+      spec = DiceSpecification.Parse(specString);
+      return getMinimum(spec);
+    }
+    
+    internal decimal Maximum(DiceSpecification spec)
+    {
+      return getMaximum(spec);
+    }
+    
+    internal decimal Maximum(string specString)
+    {
+      DiceSpecification spec;
+      spec = DiceSpecification.Parse(specString);
+      return getMaximum(spec);
+    }
+    
+    internal decimal Mean(DiceSpecification spec)
+    {
+      return getMean(spec);
+    }
+    
+    internal decimal Mean(string specString)
+    {
+      DiceSpecification spec;
+      spec = DiceSpecification.Parse(specString);
+      return getMean(spec);
+    }
+    
     private decimal[] rollDice(DiceSpecification spec)
     {
+      spec.Options = options;
       return spec.Roll();
+    }
+    
+    private decimal getMinimum(DiceSpecification spec)
+    {
+      spec.Options = options;
+      return spec.MinimumResult;
+    }
+    
+    private decimal getMaximum(DiceSpecification spec)
+    {
+      spec.Options = options;
+      return spec.MaximumResult;
+    }
+    
+    private decimal getMean(DiceSpecification spec)
+    {
+      spec.Options = options;
+      return spec.MeanResult;
     }
     
 #region constructor

@@ -238,7 +238,7 @@ namespace CraigFowler.Diceroller
       int groupExplosions;
       
 #if DEBUG
-      Console.WriteLine("\nRolling Spec: '{0}'", this.ToString());
+      // Console.WriteLine("\nRolling Spec: '{0}'", this.ToString());
 #endif
       
       /* As a safety feature, there needs to be a check that exploding dice
@@ -351,7 +351,7 @@ namespace CraigFowler.Diceroller
       // TODO:  Write this next!
       
 #if DEBUG
-      Console.WriteLine("Output for this group is {0}", output);
+      // Console.WriteLine("Output for this group is {0}", output);
 #endif
       return output;
     }
@@ -365,6 +365,10 @@ namespace CraigFowler.Diceroller
       Console.WriteLine("Has numDice: {0}, has sidesPerDie: {1}",
                         numDice.HasValue,
                         sidesPerDie.HasValue);
+      Console.WriteLine("Options: {0}, SidesPerDie: {1}, NumDice: {2}",
+                        options.ToString(),
+                        sidesPerDie.ToString(),
+                        numDice.ToString());
       */
 #endif
       
@@ -373,7 +377,7 @@ namespace CraigFowler.Diceroller
         lBound = options.LowerBound.HasValue?
           options.LowerBound.Value : 1;
         uBound = options.UpperBound.HasValue?
-          options.UpperBound.Value : sidesPerDie.Value;
+          options.UpperBound.Value : sidesPerDie.Value + 1;
         
         output = 0;
         

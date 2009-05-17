@@ -10,6 +10,7 @@ using CraigFowler.Diceroller;
 namespace Test.CraigFowler.Diceroller
 {
   [TestFixture]
+  [Ignore]
   public class RoundingTests
   {
     /* Things I need to test here:

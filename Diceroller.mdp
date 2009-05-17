@@ -1,4 +1,4 @@
-<Project name="Diceroller" fileversion="2.0" Description="A dice roller for several gamesystems" DefaultNamespace="CraigFowler.Diceroller" newfilesearch="OnLoadAutoInsert" language="C#" clr-version="Net_2_0" ctype="DotNetProject">
+<Project name="Diceroller" fileversion="2.0" newfilesearch="OnLoadAutoInsert" language="C#" DefaultNamespace="CraigFowler.Diceroller" Description="A dice roller for several gamesystems" clr-version="Net_2_0" targetFramework="2.0" ctype="DotNetProject">
   <Configurations active="Debug">
     <Configuration name="Debug" ctype="DotNetProjectConfiguration">
       <Output directory="bin" assemblyKeyFile="." assembly="debug" />
@@ -55,10 +55,21 @@
     <File name="tests/OtherOptions.cs" subtype="Code" buildaction="Compile" />
     <File name="test-results/Diceroller.mdp-Debug-2009-03-24.xml" subtype="Code" buildaction="Nothing" />
     <File name="test-results/Diceroller.mds-Debug-2009-03-24.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mdp-Debug-2009-03-25.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mdp-Debug-2009-03-27.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mdp-Debug-2009-03-29.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mdp-Debug-2009-04-01.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mdp-Debug-2009-04-02.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mds-Debug-2009-03-25.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mds-Debug-2009-03-27.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mds-Debug-2009-03-29.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mds-Debug-2009-04-01.xml" subtype="Code" buildaction="Nothing" />
+    <File name="test-results/Diceroller.mds-Debug-2009-04-02.xml" subtype="Code" buildaction="Nothing" />
+    <File name="tests/Stats.cs" subtype="Code" buildaction="Compile" />
   </Contents>
   <References>
-    <ProjectReference type="Gac" localcopy="True" refto="nunit.core, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
-    <ProjectReference type="Gac" localcopy="True" refto="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
     <ProjectReference type="Gac" localcopy="True" refto="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="nunit.core, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
+    <ProjectReference type="Gac" localcopy="True" refto="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
   </References>
 </Project>

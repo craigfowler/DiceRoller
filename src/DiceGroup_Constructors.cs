@@ -181,7 +181,7 @@ namespace CraigFowler.Diceroller
       groupOperator = null;
       numDice = null;
       sidesPerDie = null;
-      options = null;
+      options = new RollingOptions();
       storedExplosions = null;
       storedResult = null;
       randomiser = new Random();
