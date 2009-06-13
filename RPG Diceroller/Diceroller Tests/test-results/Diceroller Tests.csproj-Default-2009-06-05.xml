@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tests>
+    <TestRecord Name="CraigFowler">
+      <Tests>
+        <TestRecord Name="Test">
+          <Tests>
+            <TestRecord Name="Gaming">
+              <Tests>
+                <TestRecord Name="Diceroller">
+                  <Tests>
+                    <TestRecord Name="DomainObjects">
+                      <Tests>
+                        <TestRecord Name="TestParsingSingleGroups">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2009-06-05T19:05:18</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>5</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                          </Results>
+                          <Tests>
+                            <TestRecord Name="InvalidDiceroll">
+                              <Results>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-05T19:05:18</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.16ms</Message>
+                                  <ConsoleOutput>()
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-05T19:05:51</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.11ms</Message>
+                                  <ConsoleOutput>()
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                              </Results>
+                            </TestRecord>
+                            <TestRecord Name="NegativeDiceroll">
+                              <Results>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-05T19:05:18</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                                  <ConsoleOutput>-2d4
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-05T19:06:04</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.11ms</Message>
+                                  <ConsoleOutput>-2d4
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                              </Results>
+                            </TestRecord>
+                            <TestRecord Name="NegativeInteger">
+                              <Results>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-05T19:05:18</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput>-6
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                              </Results>
+                            </TestRecord>
+                            <TestRecord Name="PositiveDiceroll">
+                              <Results>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-05T19:05:18</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput>3d6
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                              </Results>
+                            </TestRecord>
+                            <TestRecord Name="PositiveInteger">
+                              <Results>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-05T19:05:18</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput>10
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                              </Results>
+                            </TestRecord>
+                          </Tests>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>

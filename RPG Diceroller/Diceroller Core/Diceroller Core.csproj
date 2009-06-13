@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85A0D37E-22FB-4BB6-85B9-26D1EB1445D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <newfilesearch>OnLoadAutoInsert</newfilesearch>
+    <RootNamespace>CraigFowler.Gaming.Diceroller</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <AssemblyName>diceroller-debug</AssemblyName>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <AssemblyName>diceroller</AssemblyName>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <GenerateDocumentation>true</GenerateDocumentation>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DomainObjects\" />
+    <Folder Include="DomainActions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DomainObjects\DiceSpecification.cs" />
+    <Compile Include="DomainObjects\DiceGroup.cs" />
+    <Compile Include="DomainObjects\DiceGroupOperator.cs" />
+    <Compile Include="DomainObjects\CalculationMethod.cs" />
+    <Compile Include="DomainActions\RollerCore.cs" />
+  </ItemGroup>
+</Project>

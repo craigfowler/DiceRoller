@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8D59B82-E237-41C9-B06B-6E2A12440CF0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CraigFowler.Test.Gaming.Diceroller</RootNamespace>
+    <newfilesearch>OnLoadAutoInsert</newfilesearch>
+    <AssemblyName>diceroller-tests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.core, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <Package>nunit-2.4</Package>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <Package>nunit-2.4</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DomainObjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DomainObjects\TestParsingSingleGroups.cs" />
+    <Compile Include="DomainObjects\TestParsingComplexGroups.cs" />
+    <Compile Include="DomainObjects\TestNumberOfRolls.cs" />
+    <Compile Include="DomainObjects\TestMaths.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Diceroller Core\Diceroller Core.csproj">
+      <Project>{85A0D37E-22FB-4BB6-85B9-26D1EB1445D1}</Project>
+      <Name>Diceroller Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-05-31.xml" />
+    <None Include="test-results\Diceroller Tests.csproj.test-cache" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-05.xml" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-13.xml" />
+  </ItemGroup>
+</Project>
