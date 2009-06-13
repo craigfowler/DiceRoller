@@ -374,6 +374,14 @@
       <TotalIgnored>0</TotalIgnored>
       <Time />
     </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-06-13T20:59:20</TestDate>
+      <Status>Success</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>44</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+    </UnitTestResult>
   </Results>
   <Tests>
     <TestRecord Name="CraigFowler">
@@ -748,6 +756,14 @@
           <Status>Success</Status>
           <TotalFailures>0</TotalFailures>
           <TotalSuccess>43</TotalSuccess>
+          <TotalIgnored>0</TotalIgnored>
+          <Time />
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2009-06-13T20:59:20</TestDate>
+          <Status>Success</Status>
+          <TotalFailures>0</TotalFailures>
+          <TotalSuccess>44</TotalSuccess>
           <TotalIgnored>0</TotalIgnored>
           <Time />
         </UnitTestResult>
@@ -1128,6 +1144,14 @@
               <TotalIgnored>0</TotalIgnored>
               <Time />
             </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2009-06-13T20:59:20</TestDate>
+              <Status>Success</Status>
+              <TotalFailures>0</TotalFailures>
+              <TotalSuccess>44</TotalSuccess>
+              <TotalIgnored>0</TotalIgnored>
+              <Time />
+            </UnitTestResult>
           </Results>
           <Tests>
             <TestRecord Name="Gaming">
@@ -1502,6 +1526,14 @@
                   <Status>Success</Status>
                   <TotalFailures>0</TotalFailures>
                   <TotalSuccess>43</TotalSuccess>
+                  <TotalIgnored>0</TotalIgnored>
+                  <Time />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2009-06-13T20:59:20</TestDate>
+                  <Status>Success</Status>
+                  <TotalFailures>0</TotalFailures>
+                  <TotalSuccess>44</TotalSuccess>
                   <TotalIgnored>0</TotalIgnored>
                   <Time />
                 </UnitTestResult>
@@ -1882,6 +1914,14 @@
                       <TotalIgnored>0</TotalIgnored>
                       <Time />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2009-06-13T20:59:20</TestDate>
+                      <Status>Success</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>44</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                    </UnitTestResult>
                   </Results>
                   <Tests>
                     <TestRecord Name="DomainObjects">
@@ -2253,6 +2293,22 @@
                         </UnitTestResult>
                         <UnitTestResult>
                           <TestDate>2009-06-13T18:50:11</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>43</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2009-06-13T20:56:46</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>43</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2009-06-13T20:59:20</TestDate>
                           <Status>Success</Status>
                           <TotalFailures>0</TotalFailures>
                           <TotalSuccess>43</TotalSuccess>
@@ -2687,6 +2743,22 @@
                             </UnitTestResult>
                             <UnitTestResult>
                               <TestDate>2009-06-13T18:50:11</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>6</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:56:46</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>6</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:59:20</TestDate>
                               <Status>Success</Status>
                               <TotalFailures>0</TotalFailures>
                               <TotalSuccess>6</TotalSuccess>
@@ -3645,6 +3717,32 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
                               <Tests />
                             </TestRecord>
@@ -4349,6 +4447,32 @@ Execution time: 0.00ms</Message>
                                 </UnitTestResult>
                                 <UnitTestResult>
                                   <TestDate>2009-06-13T18:50:11</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
                                   <Status>Success</Status>
                                   <TotalFailures>0</TotalFailures>
                                   <TotalSuccess>1</TotalSuccess>
@@ -5075,6 +5199,32 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
                               <Tests />
                             </TestRecord>
@@ -5790,6 +5940,32 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
                               <Tests />
                             </TestRecord>
@@ -6368,7 +6544,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="MultiplicationAtStart">
                               <Results>
@@ -6925,7 +7128,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                           </Tests>
                         </TestRecord>
@@ -7368,6 +7598,22 @@ Execution time: 0.00ms</Message>
                               <TotalIgnored>0</TotalIgnored>
                               <Time />
                             </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:56:46</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>6</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:59:20</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>6</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
                           </Results>
                           <Tests>
                             <TestRecord Name="TestCase">
@@ -7432,6 +7678,7 @@ Execution time: 0.00ms</Message>
                                   <ConsoleError />
                                 </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLongGroup">
                               <Results>
@@ -8137,7 +8384,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestBrackets1">
                               <Results>
@@ -8965,7 +9239,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestBrackets2">
                               <Results>
@@ -9743,7 +10044,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyCloseBrackets">
                               <Results>
@@ -10091,6 +10419,7 @@ x3
                                   <ConsoleError />
                                 </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyOpenBrackets">
                               <Results>
@@ -10797,7 +11126,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyCloseBrackets1">
                               <Results>
@@ -11167,7 +11523,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyCloseBrackets2">
                               <Results>
@@ -11541,7 +11924,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                           </Tests>
                         </TestRecord>
@@ -11741,6 +12151,22 @@ Execution time: 0.00ms</Message>
                             </UnitTestResult>
                             <UnitTestResult>
                               <TestDate>2009-06-13T18:50:11</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>6</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:56:46</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>6</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:59:20</TestDate>
                               <Status>Success</Status>
                               <TotalFailures>0</TotalFailures>
                               <TotalSuccess>6</TotalSuccess>
@@ -12106,7 +12532,34 @@ Execution time: 0.01ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestBrackets2">
                               <Results>
@@ -12462,7 +12915,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLongGroup">
                               <Results>
@@ -12800,7 +13280,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyCloseBrackets1">
                               <Results>
@@ -13150,7 +13657,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyCloseBrackets2">
                               <Results>
@@ -13503,7 +14037,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyOpenBrackets">
                               <Results>
@@ -13850,7 +14411,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                           </Tests>
                         </TestRecord>
@@ -14060,6 +14648,22 @@ Execution time: 0.00ms</Message>
                             </UnitTestResult>
                             <UnitTestResult>
                               <TestDate>2009-06-13T18:50:11</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>25</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:56:46</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>25</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:59:20</TestDate>
                               <Status>Success</Status>
                               <TotalFailures>0</TotalFailures>
                               <TotalSuccess>25</TotalSuccess>
@@ -14428,7 +15032,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMinimum2">
                               <Results>
@@ -14789,7 +15420,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMinimum3">
                               <Results>
@@ -15151,7 +15809,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMinimum4">
                               <Results>
@@ -15519,7 +16204,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMinimum5">
                               <Results>
@@ -15749,7 +16461,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum1">
                               <Results>
@@ -15963,7 +16702,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum2">
                               <Results>
@@ -16174,7 +16940,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum3">
                               <Results>
@@ -16388,7 +17181,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum4">
                               <Results>
@@ -16602,7 +17422,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum5">
                               <Results>
@@ -16833,7 +17680,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean1">
                               <Results>
@@ -17039,7 +17913,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean2">
                               <Results>
@@ -17245,7 +18146,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean3">
                               <Results>
@@ -17457,7 +18385,34 @@ Execution time: 0.01ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean4">
                               <Results>
@@ -17663,7 +18618,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean5">
                               <Results>
@@ -17877,7 +18859,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestHighestDiceRolls1">
                               <Results>
@@ -18050,7 +19059,34 @@ Execution time: 0.10ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.10ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.11ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestHighestDiceRolls2">
                               <Results>
@@ -18223,7 +19259,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestHighestDiceRolls3">
                               <Results>
@@ -18402,7 +19465,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestHighestDiceRolls4">
                               <Results>
@@ -18575,7 +19665,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestHighestDiceRolls5">
                               <Results>
@@ -18756,7 +19873,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls1">
                               <Results>
@@ -18929,7 +20073,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls2">
                               <Results>
@@ -19102,7 +20273,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls3">
                               <Results>
@@ -19281,7 +20479,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls4">
                               <Results>
@@ -19454,7 +20679,34 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls5">
                               <Results>
@@ -19635,9 +20887,106 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:56:46</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-06-13T20:59:20</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                           </Tests>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                    <TestRecord Name="TestRollingDice">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2009-06-13T20:59:20</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>1</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="Roll1">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:47:50</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 3.48ms</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:56:39</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 3.51ms</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T20:59:20</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 3.44ms</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-06-13T21:06:00</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 3.55ms</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
                         </TestRecord>
                       </Tests>
                     </TestRecord>

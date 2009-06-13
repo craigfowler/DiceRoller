@@ -205,7 +205,11 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
         output = ((((decimal) sides - 1) / 2) + 1) * (decimal) dice;
         break;
       case CalculationMethod.Roll:
-        output = randomiser.Next(1, sides) * dice;
+        output = 0;
+        for(int i = 0; i < dice; i++)
+        {
+          output += randomiser.Next(1, sides + 1);
+        }
         break;
       default:
         throw new ArgumentOutOfRangeException("method",

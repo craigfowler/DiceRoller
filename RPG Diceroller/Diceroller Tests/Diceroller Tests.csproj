@@ -36,6 +36,7 @@
     <Compile Include="DomainObjects\TestParsingComplexGroups.cs" />
     <Compile Include="DomainObjects\TestNumberOfRolls.cs" />
     <Compile Include="DomainObjects\TestMaths.cs" />
+    <Compile Include="TestRollingDice.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Diceroller Core\Diceroller Core.csproj">
