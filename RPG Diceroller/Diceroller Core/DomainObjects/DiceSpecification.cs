@@ -34,29 +34,38 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       NUMBER_SIDES_REGEX_GROUP  = 7,
       STATIC_NUMBER_REGEX_GROUP = 8,
       CLOSE_BRACKET_REGEX_GROUP = 9;
+    
+    public const CalculationMethod
+      DefaultCalculationMethod  = CalculationMethod.Roll;
       
     #endregion
     
     #region fields
-    private string specificationString;
+    
+    /// <value>
+    /// Never use the parsedGroup field directly.  It exists for the purpose
+    /// of caching a parsed dice specification string.  Always use the method
+    /// <see cref="GetDice()"/> instead.
+    /// </value>
     private DiceGroup parsedGroup;
+    
+    private string specificationString;
     int numberOfRolls;
     decimal?
       rerollLowerThan,
       rerollHigherThan,
-      explodeIfHigherThan,
+      explodingThreshold,
       rollAgainIfHigherThan;
+    
     #endregion
     
     #region properties
     
     //// <value>
-    /// Gets or sets the dice specification
+    /// Gets or sets the dice specification.  If the specification is changed
+    /// in any way then any parsed/cached dice groups will be cleared.
+    /// They will be re-parsed next time they are required.
     /// </value>
-    /// <exception cref="FormatException">
-    /// If the value is invalid (and cannot be parsed into a valid
-    /// specification) then this exception is thrown.
-    /// </exception>
     public string SpecificationString
     {
       get {
@@ -78,17 +87,17 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
         return numberOfRolls;
       }
       set {
-          numberOfRolls = (value >= 0)? value : 0;
+        numberOfRolls = (value >= 0)? value : 0;
       }
     }
     
     public Nullable<decimal> ExplodingThreshold
     {
       get {
-        return explodeIfHigherThan;
+        return explodingThreshold;
       }
       set {
-        explodeIfHigherThan = value;
+        explodingThreshold = value;
       }
     }
     
@@ -459,6 +468,23 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
     #endregion
     
     #region publicMethods
+    
+    /// <summary>
+    /// <para>
+    /// Returns a string representation of this dice specification, which should
+    /// be somewhat equivalent to the original specification string (although
+    /// some formatting may be different).
+    /// </para>
+    /// <para>
+    /// This method should not throw an exception, but if the dice specification
+    /// is invalid and the method <see cref="GetDice()"/> throws an exception
+    /// then it will return a string indicating that there was a failure.
+    /// </para>
+    /// </summary>
+    /// <returns>
+    /// A <see cref="System.String"/>, the string representation of the dice
+    /// spec.
+    /// </returns>
     public override string ToString()
     {
       string dgString, rollsString;
@@ -486,6 +512,24 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
         String.Format("{0}{1}", rollsString, dgString) : String.Empty;
     }
     
+    /// <summary>
+    /// <para>
+    /// Gets a <see cref="DiceGroup"/> object created from the dice spec.
+    /// </para>
+    /// <para>
+    /// Always use this method instead of using the parsedGroup field directly.
+    /// This method caches a parsed specification and will avoid re-parsing the
+    /// same spec if appropriate.
+    /// </para>
+    /// </summary>
+    /// <returns>
+    /// A <see cref="DiceGroup"/>, created from this dice specification
+    /// instance.
+    /// </returns>
+    /// <exception cref="FormatException">
+    /// The 'downstream' method <see cref="parseSpecification(string)"/> could
+    /// throw this exception if the dice format has problems.
+    /// </exception>
     public DiceGroup GetDice()
     {
       if(parsedGroup == null)
@@ -495,46 +539,205 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       return parsedGroup;
     }
     
+    /// <summary>
+    /// Rolls a dice group once and returns the result.
+    /// </summary>
+    /// <returns>
+    /// A <see cref="System.Decimal"/> - the result
+    /// </returns>
+    /// <exception cref="System.InvalidOperationException">
+    /// Thrown if there is an invalid/unrecognised operator in the group to
+    /// process.
+    /// </exception>
+    /// <exception cref="DivideByZeroException">
+    /// Thrown if the process of collating the group results means a division by
+    /// zero occurs.
+    /// </exception>
     public decimal RollOnce()
     {
-      DiceGroup group = GetDice();
-      return group.GetValue();
+      return RollOnce(DefaultCalculationMethod);
     }
     
+    /// <summary>
+    /// <para>
+    /// Gets the value of a dice group by calling its
+    /// <see cref="DiceGroup.GetValue"/> method.
+    /// </para>
+    /// <para>
+    /// This method handles exploding dice (EG: If a six is rolled, then roll
+    /// again and add the new diceroll, allowing results of 7 and above).
+    /// This is controlled by the value of <see cref="ExplodingThreshold"/>.
+    /// </para>
+    /// <para>
+    /// Finally, this method also handles discarding of low results and high
+    /// results as set by <see cref="RerollIfHigherThan"/> and
+    /// <see cref="RerollIfLowerThan"/>.
+    /// </para>
+    /// </summary>
+    /// <param name="method">
+    /// A <see cref="CalculationMethod"/>, the calculation method to use.
+    /// </param>
+    /// <returns>
+    /// A <see cref="System.Decimal"/> - the result
+    /// </returns>
+    /// <exception cref="System.InvalidOperationException">
+    /// Thrown if there is an invalid/unrecognised operator in the group to
+    /// process.
+    /// </exception>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// Thrown if the parameter <paramref name="method"/> is not a recognised
+    /// calculation method.
+    /// </exception>
+    /// <exception cref="DivideByZeroException">
+    /// Thrown if the process of collating the group results means a division by
+    /// zero occurs.
+    /// </exception>
     public decimal RollOnce(CalculationMethod method)
     {
       DiceGroup group = GetDice();
-      return group.GetValue(method);
+      decimal
+        roll = group.GetValue(method),
+        minRoll = group.GetValue(CalculationMethod.Minimum),
+        maxRoll = group.GetValue(CalculationMethod.Maximum),
+        output = 0;
+      
+      if(method == CalculationMethod.Roll &&
+         explodingThreshold.HasValue &&
+         explodingThreshold.Value > minRoll)
+      {
+        output += roll;
+        
+        while(roll >= explodingThreshold.Value)
+        {
+          roll = group.GetValue(method);
+          output += roll;
+        }
+      }
+      else
+      {
+        output = roll;
+      }
+      
+      if(method == CalculationMethod.Roll &&
+         rerollHigherThan.HasValue &&
+         rerollHigherThan.Value > minRoll &&
+         output > rerollHigherThan.Value)
+      {
+        output = RollOnce(method);
+      }
+      else if(method == CalculationMethod.Roll &&
+              rerollLowerThan.HasValue &&
+              rerollLowerThan.Value < maxRoll &&
+              (
+                !rerollHigherThan.HasValue ||
+                rerollLowerThan.Value <= rerollHigherThan.Value
+              ) &&
+              output < rerollLowerThan.Value)
+      {
+        output = RollOnce(method);
+      }
+      
+      return output;
     }
     
+    /// <summary>
+    /// Rolls a dice group multiple times, per the <see cref="NumberOfRolls"/>
+    /// and <see cref="RollAgainThreshold"/> properties.
+    /// </summary>
+    /// <returns>
+    /// A collection of <see cref="System.Decimal"/> - the results
+    /// </returns>
+    /// <exception cref="System.InvalidOperationException">
+    /// Thrown if there is an invalid/unrecognised operator in the group to
+    /// process.
+    /// </exception>
+    /// <exception cref="DivideByZeroException">
+    /// Thrown if the process of collating the group results means a division by
+    /// zero occurs.
+    /// </exception>
     public decimal[] Roll()
     {
-      decimal[] output = new decimal[NumberOfRolls];
-      DiceGroup group = GetDice();
-      
-      for(int i = 0; i < output.Length; i++)
-      {
-        output[i] = group.GetValue();
-      }
-      
-      return output;
+      return Roll(DefaultCalculationMethod);
     }
     
+    /// <summary>
+    /// Rolls a dice group multiple times using the chosen rolling methid, per
+    /// the <see cref="NumberOfRolls"/> and <see cref="RollAgainThreshold"/>
+    /// properties.
+    /// </summary>
+    /// <param name="method">
+    /// A <see cref="CalculationMethod"/>, the calculation method to use in
+    /// determining the results.
+    /// </param>
+    /// <returns>
+    /// A collection of <see cref="System.Decimal"/> - the results
+    /// </returns>
+    /// <exception cref="System.InvalidOperationException">
+    /// Thrown if there is an invalid/unrecognised operator in the group to
+    /// process.
+    /// </exception>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// Thrown if the parameter <paramref name="method"/> is not a recognised
+    /// calculation method.
+    /// </exception>
+    /// <exception cref="DivideByZeroException">
+    /// Thrown if the process of collating the group results means a division by
+    /// zero occurs.
+    /// </exception>
     public decimal[] Roll(CalculationMethod method)
     {
-      decimal[] output = new decimal[NumberOfRolls];
-      DiceGroup group = GetDice();
+      List<decimal> output = new List<decimal>();
+      int rollsRemaining;
+      bool rollAgain = false;
+      decimal minRoll = RollOnce(CalculationMethod.Minimum);
       
-      for(int i = 0; i < output.Length; i++)
+      GetDice();
+      rollsRemaining = NumberOfRolls;
+      
+      while(rollsRemaining > 0 || rollAgain)
       {
-        output[i] = group.GetValue(method);
+        if(rollAgain)
+        {
+          rollAgain = false;
+        }
+        else
+        {
+          rollsRemaining --;
+        }
+        
+        output.Add(RollOnce(method));
+        
+        if(method == CalculationMethod.Roll &&
+           RollAgainThreshold.HasValue &&
+           RollAgainThreshold.Value > minRoll &&
+           output[output.Count - 1] >= RollAgainThreshold.Value)
+        {
+          rollAgain = true;
+        }
       }
       
-      return output;
+      return output.ToArray();
     }
+    
     #endregion
     
     #region staticMethods
+    
+    /// <summary>
+    /// Static method to get a dice group object directly from a specification
+    /// string.
+    /// </summary>
+    /// <param name="spec">
+    /// A <see cref="System.String"/> - the specification string to parse
+    /// </param>
+    /// <returns>
+    /// A <see cref="DiceGroup"/> - the dice group returned by the specification
+    /// string.
+    /// </returns>
+    /// <exception cref="FormatException">
+    /// The 'downstream' method <see cref="parseSpecification(string)"/> could
+    /// throw this exception if the dice format has problems.
+    /// </exception>
     public static DiceGroup GetDice(string spec)
     {
       DiceSpecification diceSpec;
@@ -555,9 +758,17 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       diceSpec = new DiceSpecification(spec);
       return diceSpec.Roll();
     }
+    
     #endregion
     
     #region constructors
+    
+    /// <summary>
+    /// Creates a new dice specification with default values.  The
+    /// <see cref="SpecificationString"/> must be set before a
+    /// <see cref="DiceGroup"/> instance can be created from the new
+    /// specification.
+    /// </summary>
     public DiceSpecification()
     {
       specificationString = null;
@@ -565,14 +776,22 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       numberOfRolls = DEFAULT_NUMBER_OF_ROLLS;
       rerollHigherThan = null;
       rerollLowerThan = null;
-      explodeIfHigherThan = null;
+      explodingThreshold = null;
       rollAgainIfHigherThan = null;
     }
     
+    /// <summary>
+    /// Creates a new specification using a supplied specification string.
+    /// </summary>
+    /// <param name="spec">
+    /// A <see cref="System.String"/> - the initial value to use for
+    /// <see cref="SpecificationString"/>.
+    /// </param>
     public DiceSpecification(string spec) : this()
     {
       this.SpecificationString = spec;
     }
+    
     #endregion
   }
 }

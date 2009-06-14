@@ -18,16 +18,56 @@ namespace CraigFowler.Test.Gaming.Diceroller
     [Test]
     public void Roll1()
     {
-      string roll = "4d6", filePath = FILE_PATH;
+      string roll = "6d4", filePath = FILE_PATH;
+      DiceSpecification spec = new DiceSpecification(roll);
       StringBuilder output = new StringBuilder();
-
+      
       for(int i = 0; i < NUMBER_OF_TRIES; i++)
       {
-        output.Append(String.Format("{0}\n",
-                                    DiceSpecification.RollOnce(roll)));
+        output.Append(String.Format("{0}\n", spec.RollOnce()));
       }
 
       writeResultsToFile(output.ToString(), filePath);
+    }
+    
+    [Test]
+    public void Roll2()
+    {
+      string roll = "d%+3-(2*1d4/(1d6))";
+      DiceSpecification spec = new DiceSpecification(roll);
+      
+      Console.WriteLine("Input dice spec: '{0}'",
+                        roll);
+      Console.WriteLine("Parsed dice spec: '{0}'",
+                        spec.ToString());
+      Console.WriteLine("Min: {0}, Max: {1}, Mean (average): {2}",
+                        spec.RollOnce(CalculationMethod.Minimum),
+                        spec.RollOnce(CalculationMethod.Maximum),
+                        spec.RollOnce(CalculationMethod.Mean));
+      Console.WriteLine("Sample roll: {0}", spec.RollOnce());
+    }
+    
+    [Test]
+    public void Roll3()
+    {
+      DiceSpecification spec = new DiceSpecification("9#d6");
+      spec.RollAgainThreshold = 6;
+      StringBuilder output = new StringBuilder();
+      decimal[] results;
+      
+      for(int i = 0; i < NUMBER_OF_TRIES; i++)
+      {
+        results = spec.Roll();
+        
+        output.Append(String.Format("{0} results", results.Length));
+        foreach(decimal result in results)
+        {
+          output.Append(String.Format(", {0}", result));
+        }
+        output.Append("\n");
+      }
+      
+      writeResultsToFile(output.ToString(), FILE_PATH);
     }
 
     private void writeResultsToFile(string results, string path)

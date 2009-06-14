@@ -50,5 +50,8 @@
     <None Include="test-results\Diceroller Tests.csproj.test-cache" />
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-05.xml" />
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-13.xml" />
+    <None Include="test-results\Test.Diceroller.csproj-Default-2009-06-14.xml" />
+    <None Include="test-results\Test.Diceroller.csproj.test-cache" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-14.xml" />
   </ItemGroup>
 </Project>

@@ -26,6 +26,30 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
     /// <returns>
     /// A <see cref="System.Decimal"/>, the result
     /// </returns>
+    /// <exception cref="System.InvalidOperationException">
+    /// <para>
+    /// The downstream method <see cref="getResultsTotal(List<DiceResult>)"/>
+    /// could throw this exception if there is an invalid operator in the
+    /// results to process.
+    /// </para>
+    /// <para>
+    /// This could also be thrown by the downstream method
+    /// <see cref="getDiceGroupValue(DiceGroup,CalculationMethod)"/> if the
+    /// settings of the dice group indicate that more dice results should be
+    /// discarded than should be rolled.
+    /// </para>
+    /// </exception>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// The downstream method
+    /// <see cref="getDiceGroupValue(DiceGroup,CalculationMethod)"/> could throw
+    /// this exception if the parameter <paramref name="baseMethod"/> is not
+    /// recognised.
+    /// </exception>
+    /// <exception cref="DivideByZeroException">
+    /// The downstream method <see cref="getResultsTotal(List<DiceResult>)"/>
+    /// could throw this exception if there is a division by zero in the
+    /// totalling of the results.
+    /// </exception>
     public static decimal CalculateValue(DiceGroup group,
                                          CalculationMethod baseMethod)
     {
@@ -47,7 +71,7 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
       }
       else
       {
-        groupValue = getDiceGroupValue(group.Sides, group.Dice, method);
+        groupValue = getDiceGroupValue(group, method);
       }
       
       return groupValue;
@@ -117,6 +141,15 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
     /// <returns>
     /// A <see cref="System.Decimal"/> - the result
     /// </returns>
+    /// <exception cref="System.InvalidOperationException">
+    /// If for any reason the result count anything other than one single result
+    /// after executing all of the applicable operators, then this means that
+    /// one or more of the operators was invalid.
+    /// </exception>
+    /// <exception cref="DivideByZeroException">
+    /// If the totalling of the dice results means that a division by zero
+    /// occurs, then this exception will be thrown.
+    /// </exception>
     private static decimal getResultsTotal(List<DiceResult> groupResults)
     {
       if(groupResults[0].Operator == DiceGroupOperator.Subtract)
@@ -158,7 +191,7 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
       
       if(groupResults.Count != 1)
       {
-        throw new InvalidOperationException("Impossible dice result count");
+        throw new InvalidOperationException("Unrecognised operator");
       }
       
       return groupResults[0].Value;
@@ -169,11 +202,8 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
     /// <see cref="CalculationMethod"/> in use.  The dice are only rolled
     /// 'normally' if <see cref="CalculationMethod.Roll"/> is in use.
     /// </summary>
-    /// <param name="sides">
-    /// A <see cref="System.Int32"/>, the number of sides per die
-    /// </param>
-    /// <param name="dice">
-    /// A <see cref="System.Int32"/>, the number of dice to be rolled
+    /// <param name="group">
+    /// A <see cref="DiceGroup"/>, the dice group to roll
     /// </param>
     /// <param name="method">
     /// A <see cref="CalculationMethod"/>, the calculation method to use
@@ -181,35 +211,51 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
     /// <returns>
     /// A <see cref="System.Decimal"/>, the result
     /// </returns>
-    private static decimal getDiceGroupValue(int sides,
-                                             int dice,
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// If the parameter <paramref name="method"/> is not a recognised
+    /// calculation method then this exception will be thrown.
+    /// </exception>
+    /// <exception cref="InvalidOperationException">
+    /// If the number of dice rolls to discard is more than the number of dice
+    /// being rolled, then this exception is thrown.
+    /// </exception>
+    private static decimal getDiceGroupValue(DiceGroup group,
                                              CalculationMethod method)
     {
       decimal output;
+      int
+        sides = group.Sides,
+        dice = group.Dice,
+        discardLowest = group.DiscardLowest,
+        discardHighest = group.DiscardHighest,
+        effectiveDice;
+      
+      effectiveDice = dice - (discardHighest + discardLowest);
+      if(effectiveDice < 0)
+      {
+        throw new InvalidOperationException("Discarding more dice than are " +
+                                            "being rolled");
+      }
       
       switch(method)
       {
       case CalculationMethod.HighestDiceRolls:
-        output = sides * dice;
+        output = sides * effectiveDice;
         break;
       case CalculationMethod.Maximum:
-        output = sides * dice;
+        output = sides * effectiveDice;
         break;
       case CalculationMethod.LowestDiceRolls:
-        output = dice;
+        output = effectiveDice;
         break;
       case CalculationMethod.Minimum:
-        output = dice;
+        output = effectiveDice;
         break;
       case CalculationMethod.Mean:
-        output = ((((decimal) sides - 1) / 2) + 1) * (decimal) dice;
+        output = ((((decimal) sides - 1) / 2) + 1) * (decimal) effectiveDice;
         break;
       case CalculationMethod.Roll:
-        output = 0;
-        for(int i = 0; i < dice; i++)
-        {
-          output += randomiser.Next(1, sides + 1);
-        }
+        output = rollDice(sides, dice, discardLowest, discardHighest);
         break;
       default:
         throw new ArgumentOutOfRangeException("method",
@@ -217,6 +263,31 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
       }
       
       return output;
+    }
+    
+    private static int rollDice(int sides,
+                                int dice,
+                                int dropLowest,
+                                int dropHighest)
+    {
+      List<int> output = new List<int>();
+      int result = 0;
+      
+      for(int i = 0; i < dice; i++)
+      {
+        output.Add(randomiser.Next(1, sides + 1));
+      }
+      
+      output.Sort();
+      output.RemoveRange(0, dropLowest);
+      output.RemoveRange(output.Count - (dropHighest + 1), dropHighest);
+      
+      foreach(int roll in output)
+      {
+        result += roll;
+      }
+      
+      return result;
     }
     #endregion
     

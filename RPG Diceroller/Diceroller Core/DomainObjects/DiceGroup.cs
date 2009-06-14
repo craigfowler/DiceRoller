@@ -9,6 +9,7 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
   public class DiceGroup
   {
     #region constants
+    
     private const string
       INVALID_NUM_DICE_ERROR  = "Number of dice must be more than zero.",
       INVALID_NUM_SIDES_ERROR = "Number of sides must be more than zero.";
@@ -21,13 +22,12 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       DICEGROUP_OPEN_SYMBOL   = "(",
       DICEGROUP_CLOSE_SYMBOL  = ")";
     
-    private const CalculationMethod
-      DEFAULT_CALC_METHOD     = CalculationMethod.Roll;
     #endregion
     
     #region fields
     private List<DiceGroup> innerGroups;
-    private int numberOfDice, sidesPerDie;
+    private int numberOfDice, sidesPerDie, discardLowestDice,
+      discardHighestDice;
     private DiceGroupOperator groupOperator;
     #endregion
     
@@ -85,6 +85,33 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
         }
       }
     }
+    
+    public int DiscardHighest
+    {
+      get {
+        return discardHighestDice;
+      }
+      set {
+        if(value >= 0)
+        {
+          discardHighestDice = value;
+        }
+      }
+    }
+    
+    public int DiscardLowest
+    {
+      get {
+        return discardLowestDice;
+      }
+      set {
+        if(value >= 0)
+        {
+          discardLowestDice = value;
+        }
+      }
+    }
+    
     #endregion
     
     #region privateMethods
@@ -186,11 +213,63 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       return output.ToString();
     }
     
+    /// <summary>
+    /// Gets the value of the dice group by performing a normal 'roll' of the
+    /// dice.
+    /// </summary>
+    /// <returns>
+    /// A <see cref="System.Decimal"/> - the result.
+    /// </returns>
+    /// <exception cref="System.InvalidOperationException">
+    /// The downstream method
+    /// <see cref="DomainActions.RollerCore.CalculateValue(DiceGroup,CalculationMethod)"/>
+    /// could throw this exception if there is an invalid operator in the
+    /// results to process.
+    /// </exception>
+    /// <exception cref="DivideByZeroException">
+    /// The downstream method
+    /// <see cref="DomainActions.RollerCore.CalculateValue(DiceGroup,CalculationMethod)"/>
+    /// could throw this exception if there is a division by zero in calculating
+    /// the results.
+    /// </exception>
     public decimal GetValue()
     {
-      return GetValue(DEFAULT_CALC_METHOD);
+      return GetValue(DiceSpecification.DefaultCalculationMethod);
     }
     
+    /// <summary>
+    /// <para>
+    /// Gets the value of the dice group.  Depending on the
+    /// <paramref name="method"/> used this could actually roll the dice, or it
+    /// could instead return the average (mean) roll, minimum roll etc.
+    /// </para>
+    /// <para>
+    /// Internally, this simply serves as a wrapper around the method:
+    /// <see cref="DomainActions.RollerCore.CalculateValue(DiceGroup,CalculationMethod)"/>,
+    /// thus any exceptions encountered will have been thrown from there.
+    /// </para>
+    /// </summary>
+    /// <param name="method">
+    /// A <see cref="CalculationMethod"/>, the calculation method to use in
+    /// calculating the results.
+    /// </param>
+    /// <returns>
+    /// A <see cref="System.Decimal"/> - the result.
+    /// </returns>
+    /// <exception cref="System.InvalidOperationException">
+    /// Thrown if there is an invalid operator in the dice group.  It is also
+    /// thrown if the combination of <see cref="DiscardHighest"/> and
+    /// <see cref="DiscardLowest"/> result in more dice being discarded than are
+    /// rolled.
+    /// </exception>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// This is thrown is the parameter <paramref name="method"/> is not
+    /// recognised s a valid calculation method.
+    /// </exception>
+    /// <exception cref="DivideByZeroException">
+    /// This is thrown if calculating the value of this dice group results in a
+    /// division by zero.
+    /// </exception>
     public decimal GetValue(CalculationMethod method)
     {
       return DomainActions.RollerCore.CalculateValue(this, method);
@@ -204,6 +283,8 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       numberOfDice = 1;
       sidesPerDie = 1;
       groupOperator = 0;
+      discardHighestDice = 0;
+      discardLowestDice = 0;
     }
     #endregion
   }

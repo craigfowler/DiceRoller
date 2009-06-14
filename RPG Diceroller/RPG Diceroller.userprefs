@@ -1,64 +1,26 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Diceroller Core/DomainActions/RollerCore.cs" ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Diceroller Tests/TestRollingDice.cs" ctype="Workbench">
     <Files>
-      <File FileName="Diceroller Tests/TestRollingDice.cs" Line="40" Column="40" />
-      <File FileName="Diceroller Core/DomainActions/RollerCore.cs" Line="211" Column="49" />
+      <File FileName="Diceroller Tests/TestRollingDice.cs" Line="22" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Diceroller Core" expanded="True">
-            <Node name="DomainActions" expanded="True">
-              <Node name="RollerCore.cs" selected="True" />
-            </Node>
-            <Node name="DomainObjects" expanded="True" />
-          </Node>
-          <Node name="Diceroller Tests" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="DomainObjects" expanded="True" />
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
       <Pad Id="ClassPad">
-        <State expanded="True">
+        <State expanded="True" selected="True">
           <Option id="ShowProjects" value="True" />
           <Option id="NestedNamespaces" value="False" />
           <Option id="GroupByAccess" value="True" />
           <Option id="PublicApiOnly" value="True" />
           <Option id="GroupByType" value="True" />
-          <Node name="Diceroller Core" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="CraigFowler.Gaming.Diceroller.DomainActions" expanded="True" />
-            <Node name="CraigFowler.Gaming.Diceroller.DomainObjects" expanded="True" />
-          </Node>
-          <Node name="Diceroller Tests" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="CraigFowler.Test.Gaming.Diceroller" selected="True" />
-            <Node name="CraigFowler.Test.Gaming.Diceroller.DomainObjects" expanded="True" />
-          </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True">
-          <Option id="ShowTestCounters" value="False" />
-          <Option id="ShowTestTime" value="True" />
-          <Node name="Diceroller Tests" expanded="True">
-            <Node name="CraigFowler" expanded="True">
-              <Node name="Test" expanded="True">
-                <Node name="Gaming" expanded="True">
-                  <Node name="Diceroller" expanded="True">
-                    <Node name="TestRollingDice" expanded="True">
-                      <Node name="Roll1" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
