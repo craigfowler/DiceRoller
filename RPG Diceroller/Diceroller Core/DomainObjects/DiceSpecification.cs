@@ -237,7 +237,7 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
             {
               throw new FormatException(MISSING_OPERATOR_ERROR);
             }
-            else if(topLevel && oper.HasValue &&
+            else if(first && oper.HasValue &&
                     (
                      oper.Value == DiceGroupOperator.Multiply ||
                      oper.Value == DiceGroupOperator.Divide
@@ -535,6 +535,38 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       if(parsedGroup == null)
       {
         parsedGroup = parseSpecification(SpecificationString);
+      }
+      return parsedGroup;
+    }
+    
+    /// <summary>
+    /// <para>
+    /// Gets a <see cref="DiceGroup"/> object created from the dice spec.  If
+    /// parsing the dice specification would result in an exception being thrown
+    /// then the execption is trapped and instead a null reference is returned.
+    /// </para>
+    /// <para>
+    /// Always use this method instead of using the parsedGroup field directly.
+    /// This method caches a parsed specification and will avoid re-parsing the
+    /// same spec if appropriate.
+    /// </para>
+    /// </summary>
+    /// <returns>
+    /// A <see cref="DiceGroup"/>, created from this dice specification
+    /// instance.
+    /// </returns>
+    public DiceGroup TryGetDice()
+    {
+      if(parsedGroup == null)
+      {
+        try
+        {
+          parsedGroup = parseSpecification(SpecificationString);
+        }
+        catch(FormatException)
+        {
+          parsedGroup = null;
+        }
       }
       return parsedGroup;
     }

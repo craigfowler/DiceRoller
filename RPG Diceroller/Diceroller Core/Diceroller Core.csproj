@@ -37,6 +37,7 @@
   <ItemGroup>
     <Folder Include="DomainObjects\" />
     <Folder Include="DomainActions\" />
+    <Folder Include="Plugins\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainObjects\DiceSpecification.cs" />
@@ -44,5 +45,8 @@
     <Compile Include="DomainObjects\DiceGroupOperator.cs" />
     <Compile Include="DomainObjects\CalculationMethod.cs" />
     <Compile Include="DomainActions\RollerCore.cs" />
+    <Compile Include="Plugins\DnD3e.cs" />
+    <Compile Include="Plugins\FudgeDice.cs" />
+    <Compile Include="Plugins\DnD3eRollingMethod.cs" />
   </ItemGroup>
 </Project>

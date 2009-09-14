@@ -69,6 +69,23 @@ namespace CraigFowler.Test.Gaming.Diceroller
       
       writeResultsToFile(output.ToString(), FILE_PATH);
     }
+    
+    [Test]
+    public void Roll4()
+    {
+      string roll = "4d6";
+      string strResult = String.Empty;
+      DiceSpecification spec = new DiceSpecification(roll);
+      
+      spec.TryGetDice().DiscardLowest = 1;
+      
+      for(int i = 0; i < NUMBER_OF_TRIES; i++)
+      {
+        strResult += String.Format("{0}\n", spec.RollOnce().ToString());
+      }
+      
+      writeResultsToFile(strResult, FILE_PATH);
+    }
 
     private void writeResultsToFile(string results, string path)
     {
@@ -78,6 +95,18 @@ namespace CraigFowler.Test.Gaming.Diceroller
       }
 
       File.WriteAllText(path, results);
+    }
+  
+    [Test]
+    public void TestDiablo()
+    {
+      string roll = "6#3d4+6-1d6";
+      DiceSpecification spec = new DiceSpecification(roll);
+      foreach(decimal result in spec.Roll())
+      {
+        Console.WriteLine("Result: {0}", result);
+//        Console.WriteLine("Average: {0}", spec.RollOnce(CalculationMethod.Mean));
+      }
     }
   }
 }

@@ -30,6 +30,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DomainObjects\" />
+    <Folder Include="DomainActions\" />
+    <Folder Include="Plugins\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainObjects\TestParsingSingleGroups.cs" />
@@ -37,6 +39,7 @@
     <Compile Include="DomainObjects\TestNumberOfRolls.cs" />
     <Compile Include="DomainObjects\TestMaths.cs" />
     <Compile Include="TestRollingDice.cs" />
+    <Compile Include="Plugins\TestFudge.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Diceroller Core\Diceroller Core.csproj">
@@ -53,5 +56,9 @@
     <None Include="test-results\Test.Diceroller.csproj-Default-2009-06-14.xml" />
     <None Include="test-results\Test.Diceroller.csproj.test-cache" />
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-14.xml" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-15.xml" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-16.xml" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-26.xml" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-27.xml" />
   </ItemGroup>
 </Project>

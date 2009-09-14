@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tests>
+    <TestRecord Name="CraigFowler">
+      <Tests>
+        <TestRecord Name="Test">
+          <Tests>
+            <TestRecord Name="Gaming">
+              <Tests>
+                <TestRecord Name="Diceroller">
+                  <Tests>
+                    <TestRecord Name="TestRollingDice">
+                      <Tests>
+                        <TestRecord Name="TestDiablo">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2009-07-19T19:28:35</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 0.12ms</Message>
+                              <ConsoleOutput>Result: 7
+Average: 10.0
+Result: 7
+Average: 10.0
+Result: 5
+Average: 10.0
+Result: 14
+Average: 10.0
+Result: 11
+Average: 10.0
+Result: 9
+Average: 10.0
+</ConsoleOutput>
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-07-19T19:29:11</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 0.11ms</Message>
+                              <ConsoleOutput>Result: 11
+Result: 12
+Result: 9
+Result: 8
+Result: 13
+Result: 14
+</ConsoleOutput>
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>
