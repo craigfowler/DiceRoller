@@ -26,12 +26,13 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
     
     #region fields
     private List<DiceGroup> innerGroups;
-    private int numberOfDice, sidesPerDie, discardLowestDice,
-      discardHighestDice;
+    private int numberOfDice, sidesPerDie, discardLowestDice, discardHighestDice;
+    private int? rerollLowerThan, rerollHigherThan;
     private DiceGroupOperator groupOperator;
     #endregion
     
     #region properties
+	
     public DiceGroupOperator Operator
     {
       get {
@@ -112,9 +113,37 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       }
     }
     
+    public int? RerollLowerThan
+    {
+      get {
+        return rerollLowerThan;
+      }
+      set {
+        if(!value.HasValue || value.Value > 1)
+        {
+          rerollLowerThan = value;
+        }
+      }
+    }
+    
+    
+    public int? RerollHigherThan
+    {
+      get {
+        return rerollHigherThan;
+      }
+      set {
+        if(!value.HasValue || value.Value > 1)
+        {
+          rerollHigherThan = value;
+        }
+      }
+    }
+    
     #endregion
     
     #region privateMethods
+    
     private string getNumericString()
     {
       string output;
@@ -171,9 +200,11 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       
       return output;
     }
+    
     #endregion
     
     #region publicMethods
+    
     public override string ToString()
     {
       return ToString(true, false);
@@ -274,9 +305,11 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
     {
       return DomainActions.RollerCore.CalculateValue(this, method);
     }
+    
     #endregion
     
     #region constructor
+    
     public DiceGroup()
     {
       innerGroups = new List<DiceGroup>();
@@ -285,7 +318,10 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       groupOperator = 0;
       discardHighestDice = 0;
       discardLowestDice = 0;
+      rerollHigherThan = null;
+      rerollLowerThan = null;
     }
+    
     #endregion
   }
 }

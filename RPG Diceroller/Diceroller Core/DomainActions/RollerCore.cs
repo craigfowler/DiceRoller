@@ -223,27 +223,20 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
                                              CalculationMethod method)
     {
       decimal output;
-      int
-        sides = group.Sides,
-        dice = group.Dice,
-        discardLowest = group.DiscardLowest,
-        discardHighest = group.DiscardHighest,
-        effectiveDice;
+      int effectiveDice = group.Dice - (group.DiscardHighest + group.DiscardLowest);
       
-      effectiveDice = dice - (discardHighest + discardLowest);
       if(effectiveDice < 0)
       {
-        throw new InvalidOperationException("Discarding more dice than are " +
-                                            "being rolled");
+        throw new InvalidOperationException("Discarding more dice than are being rolled");
       }
       
       switch(method)
       {
       case CalculationMethod.HighestDiceRolls:
-        output = sides * effectiveDice;
+        output = group.Sides * effectiveDice;
         break;
       case CalculationMethod.Maximum:
-        output = sides * effectiveDice;
+        output = group.Sides * effectiveDice;
         break;
       case CalculationMethod.LowestDiceRolls:
         output = effectiveDice;
@@ -252,14 +245,18 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
         output = effectiveDice;
         break;
       case CalculationMethod.Mean:
-        output = ((((decimal) sides - 1) / 2) + 1) * (decimal) effectiveDice;
+        output = ((((decimal) group.Sides - 1) / 2) + 1) * (decimal) effectiveDice;
         break;
       case CalculationMethod.Roll:
-        output = rollDice(sides, dice, discardLowest, discardHighest);
+        output = rollDice(group.Sides,
+                          group.Dice,
+                          group.DiscardLowest,
+                          group.DiscardHighest,
+                          group.RerollLowerThan,
+                          group.RerollHigherThan);
         break;
       default:
-        throw new ArgumentOutOfRangeException("method",
-                                              "Invalid calculation method");
+        throw new ArgumentOutOfRangeException("method", "Invalid calculation method");
       }
       
       return output;
@@ -268,14 +265,34 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
     private static int rollDice(int sides,
                                 int dice,
                                 int dropLowest,
-                                int dropHighest)
+                                int dropHighest,
+                                int? rerollLow,
+                                int? rerollHigh)
     {
       List<int> output = new List<int>();
-      int result = 0;
+      int result = 0, min, max;
+      
+      if(rerollLow.HasValue && rerollLow.Value < sides)
+      {
+        min = rerollLow.Value;
+      }
+      else
+      {
+        min = 1;
+      }
+      
+      if(rerollHigh.HasValue && rerollHigh.Value < sides && rerollHigh.Value >= min)
+      {
+        max = rerollHigh.Value + 1;
+      }
+      else
+      {
+        max = sides + 1;
+      }
       
       for(int i = 0; i < dice; i++)
       {
-        output.Add(randomiser.Next(1, sides + 1));
+        output.Add(randomiser.Next(min, max));
       }
       
       output.Sort();
@@ -299,6 +316,7 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
     #endregion
     
     #region containedClass
+    
     public class DiceResult
     {
       public decimal Value;
@@ -310,6 +328,7 @@ namespace CraigFowler.Gaming.Diceroller.DomainActions
         Operator = op;
       }
     }
+    
     #endregion
   }
 }

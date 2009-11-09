@@ -14,19 +14,23 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
     
     #region fields
     private DiceSpecification statsSpec;
-    private int rerollStatsDiceLessThanOrEqualTo;
+    private int? rerollStatsDiceLessThanOrEqualTo;
     private DnD3eRollingMethod rollMethod;
     #endregion
     
     #region properties
     
-    public int DieRerollThreshold
+    /// <value>
+    /// Rerolls any individual die that comes up less than this number.
+    /// Must be between one and six, or null. Default is null (no rerolling).
+    /// </value>
+    public int? DieRerollThreshold
     {
       get {
         return rerollStatsDiceLessThanOrEqualTo;
       }
       set {
-        if(value >= 0 && value < 5)
+        if(!value.HasValue || (value.Value > 0 && value.Value < 6))
         {
           rerollStatsDiceLessThanOrEqualTo = value;
           statsSpec = null;
@@ -41,6 +45,9 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
       }
     }
     
+    /// <value>
+    /// Gets or sets the D&D 3.x rolling method for this stat block, default is "4d6 drop lowest".
+    /// </value>
     public DnD3eRollingMethod RollingMethod
     {
       get {
@@ -74,8 +81,20 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
                                               "Unrecognised rolling method");
       }
       
-      // TODO: Handle rerolling dice that come up less than
-      // rerollStatsDiceLessThanOrEqualTo
+      output.GetDice().RerollLowerThan = DieRerollThreshold;
+      
+      return output;
+    }
+    
+    private int[] convertDecimalArray(decimal[] inputArray)
+    {
+      int[] output;
+      
+      output = new int[inputArray.Length];
+      for(int i = 0; i < inputArray.Length; i++)
+      {
+        output[i] = (int) inputArray[i];
+      }
       
       return output;
     }
@@ -84,35 +103,33 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
     
     #region publicMethods
     
+    /// <summary>
+    /// Rolls a set of D&D 3.x stats using the specified parameters.
+    /// </summary>
+    /// <returns>
+    /// A <see cref="System.Int32"/> array containing six results.
+    /// </returns>
     public int[] RollStats()
     {
-      int[] output;
-      decimal[] tempOutput;
-      
       if(statsSpec == null)
       {
         statsSpec = getDiceSpec(rollMethod);
       }
       
-      tempOutput = statsSpec.Roll();
-      output = new int[tempOutput.Length];
-      for(int i = 0; i < tempOutput.Length; i++)
-      {
-        output[i] = (int) tempOutput[i];
-      }
-      
-      return output;
+      return convertDecimalArray(statsSpec.Roll());
     }
     
     #endregion
     
     #region constructor
+    
     public DnD3e()
     {
       statsSpec = null;
-      rerollStatsDiceLessThanOrEqualTo = 0;
+      rerollStatsDiceLessThanOrEqualTo = null;
       rollMethod = DnD3eRollingMethod.FourD6DropLowest;
     }
+    
     #endregion
   }
 }

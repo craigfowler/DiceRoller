@@ -91,6 +91,11 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       }
     }
     
+    /// <value>
+    /// If an individual roll comes up with this value or higher then the roll will be repeated and
+    /// the result added to create a cumulative total.  This parameter alone will not alter the number
+    /// of results returned however.
+    /// </value>
     public Nullable<decimal> ExplodingThreshold
     {
       get {
@@ -101,6 +106,10 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       }
     }
     
+    /// <value>
+    /// If an individual roll comes up higher than this value then the result will be discarded and
+    /// the roll attempted again.
+    /// </value>
     public Nullable<decimal> RerollIfHigherThan
     {
       get {
@@ -111,6 +120,10 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       }
     }
     
+    /// <value>
+    /// If an individual roll comes up lower than this value then the result will be discarded and
+    /// the roll attempted again.
+    /// </value>
     public Nullable<decimal> RerollIfLowerThan
     {
       get {
@@ -121,6 +134,17 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       }
     }
     
+    /// <value>
+    /// <para>
+    /// This is a value where if an individual roll turns out higher than or equal to this threshold,
+    /// another roll is added 'for free'.  That is, the number of results returned by
+    /// <see cref="Roll"/> will be higher than <see cref="NumberOfRolls"/>.
+    /// </para>
+    /// <para>
+    /// Note that this property is checked after <see cref="ExplodingThreshold"/>,
+    /// <see cref="RerollIfHigherThan"/> and <see cref="RerollIfLowerThan"/> have been resolved.
+    /// </para>
+    /// </value>
     public Nullable<decimal> RollAgainThreshold
     {
       get {
@@ -628,27 +652,21 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
     {
       DiceGroup group = GetDice();
       decimal
-        roll = group.GetValue(method),
+        roll,
         minRoll = group.GetValue(CalculationMethod.Minimum),
         maxRoll = group.GetValue(CalculationMethod.Maximum),
         output = 0;
       
-      if(method == CalculationMethod.Roll &&
-         explodingThreshold.HasValue &&
-         explodingThreshold.Value > minRoll)
+      // Roll the dice, and if we trigger an explosion keep rolling
+      do
       {
+        roll = group.GetValue(method);
         output += roll;
-        
-        while(roll >= explodingThreshold.Value)
-        {
-          roll = group.GetValue(method);
-          output += roll;
-        }
       }
-      else
-      {
-        output = roll;
-      }
+      while(method == CalculationMethod.Roll &&
+            explodingThreshold.HasValue &&
+            explodingThreshold.Value > minRoll &&
+            roll >= explodingThreshold.Value);
       
       if(method == CalculationMethod.Roll &&
          rerollHigherThan.HasValue &&
@@ -730,6 +748,9 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       {
         if(rollAgain)
         {
+          /* If this is a 'free' roll from the roll again mechanism then don't decrement
+           * the "rolls remaining" counter
+           */
           rollAgain = false;
         }
         else
@@ -739,9 +760,16 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
         
         output.Add(RollOnce(method));
         
+        /* If the roll just made is more than or equal to the 'roll again' threshold then
+         * the next roll is free
+         */
         if(method == CalculationMethod.Roll &&
            RollAgainThreshold.HasValue &&
            RollAgainThreshold.Value > minRoll &&
+           (
+             !RerollIfLowerThan.HasValue ||
+             RollAgainThreshold.Value > RerollIfLowerThan.Value
+           ) &&
            output[output.Count - 1] >= RollAgainThreshold.Value)
         {
           rollAgain = true;

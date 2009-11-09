@@ -13,7 +13,7 @@ namespace CraigFowler.Test.Gaming.Diceroller
     private const int
       NUMBER_OF_TRIES                   = 10000;
     private const string
-      FILE_PATH = "/home/craig/projects/diceroller/doc/rollingOutput.csv";
+      FILE_PATH = "/home/craig/projects/DiceRoller/doc/rollingOutput.csv";
 
     [Test]
     public void Roll1()
