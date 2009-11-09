@@ -1,19 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Diceroller Tests/TestRollingDice.cs" ctype="Workbench">
-    <Files>
-      <File FileName="Diceroller Core/Plugins/FudgeDice.cs" Line="105" Column="12" />
-      <File FileName="Diceroller Tests/TestRollingDice.cs" Line="108" Column="82" />
-    </Files>
+  <MonoDevelop.Ide.Workbench ctype="Workbench">
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Diceroller Core" expanded="True">
+          <Node name="Core" expanded="True" selected="True">
             <Node name="DomainActions" expanded="True" />
             <Node name="DomainObjects" expanded="True" />
             <Node name="Plugins" expanded="True" />
           </Node>
           <Node name="Diceroller Tests" expanded="True">
-            <Node name="References" selected="True" />
+            <Node name="References" expanded="True" />
+            <Node name="DomainObjects" expanded="True" />
             <Node name="Plugins" expanded="True" />
           </Node>
         </State>
@@ -22,13 +19,12 @@
         <State expanded="True">
           <Option id="ShowProjects" value="True" />
           <Option id="NestedNamespaces" value="False" />
-          <Option id="GroupByAccess" value="True" />
           <Option id="PublicApiOnly" value="True" />
           <Option id="GroupByType" value="True" />
-          <Node name="Diceroller Core" expanded="True">
-            <Node name="CraigFowler.Gaming.Diceroller.Plugins" expanded="True">
-              <Node name="CraigFowler.Gaming.Diceroller.Plugins.DnD3e" selected="True" />
-            </Node>
+          <Option id="GroupByAccess" value="True" />
+          <Node name="Core" expanded="True" />
+          <Node name="Diceroller Tests" expanded="True">
+            <Node name="References" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -36,21 +32,7 @@
         <State />
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True">
-          <Node name="Diceroller Tests" expanded="True">
-            <Node name="CraigFowler" expanded="True">
-              <Node name="Test" expanded="True">
-                <Node name="Gaming" expanded="True">
-                  <Node name="Diceroller" expanded="True">
-                    <Node name="TestRollingDice" expanded="True">
-                      <Node name="TestDiablo" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
