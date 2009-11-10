@@ -40,6 +40,7 @@
     <Compile Include="TestRollingDice.cs" />
     <Compile Include="Plugins\TestFudge.cs" />
     <Compile Include="Plugins\TestDnD3.cs" />
+    <Compile Include="Plugins\TestShadowrun4.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Diceroller Core\Core.csproj">
@@ -62,5 +63,6 @@
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-06-27.xml" />
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-07-19.xml" />
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-11-09.xml" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-11-10.xml" />
   </ItemGroup>
 </Project>

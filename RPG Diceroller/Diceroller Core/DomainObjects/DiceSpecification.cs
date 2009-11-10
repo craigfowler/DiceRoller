@@ -73,7 +73,7 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
       }
       set {
         specificationString = value;
-        parsedGroup = null;
+        TryGetDice();
       }
     }
     

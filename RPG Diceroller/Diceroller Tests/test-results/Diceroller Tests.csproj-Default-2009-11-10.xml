@@ -17,6 +17,14 @@
       <TotalIgnored>0</TotalIgnored>
       <Time />
     </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2009-11-10T23:22:29</TestDate>
+      <Status>Success</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>53</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+    </UnitTestResult>
   </Results>
   <Tests>
     <TestRecord Name="CraigFowler">
@@ -34,6 +42,14 @@
           <Status>Success</Status>
           <TotalFailures>0</TotalFailures>
           <TotalSuccess>52</TotalSuccess>
+          <TotalIgnored>0</TotalIgnored>
+          <Time />
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2009-11-10T23:22:29</TestDate>
+          <Status>Success</Status>
+          <TotalFailures>0</TotalFailures>
+          <TotalSuccess>53</TotalSuccess>
           <TotalIgnored>0</TotalIgnored>
           <Time />
         </UnitTestResult>
@@ -57,6 +73,14 @@
               <TotalIgnored>0</TotalIgnored>
               <Time />
             </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2009-11-10T23:22:29</TestDate>
+              <Status>Success</Status>
+              <TotalFailures>0</TotalFailures>
+              <TotalSuccess>53</TotalSuccess>
+              <TotalIgnored>0</TotalIgnored>
+              <Time />
+            </UnitTestResult>
           </Results>
           <Tests>
             <TestRecord Name="Gaming">
@@ -74,6 +98,14 @@
                   <Status>Success</Status>
                   <TotalFailures>0</TotalFailures>
                   <TotalSuccess>52</TotalSuccess>
+                  <TotalIgnored>0</TotalIgnored>
+                  <Time />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2009-11-10T23:22:29</TestDate>
+                  <Status>Success</Status>
+                  <TotalFailures>0</TotalFailures>
+                  <TotalSuccess>53</TotalSuccess>
                   <TotalIgnored>0</TotalIgnored>
                   <Time />
                 </UnitTestResult>
@@ -97,6 +129,14 @@
                       <TotalIgnored>0</TotalIgnored>
                       <Time />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2009-11-10T23:22:29</TestDate>
+                      <Status>Success</Status>
+                      <TotalFailures>0</TotalFailures>
+                      <TotalSuccess>53</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                    </UnitTestResult>
                   </Results>
                   <Tests>
                     <TestRecord Name="TestRollingDice">
@@ -111,6 +151,14 @@
                         </UnitTestResult>
                         <UnitTestResult>
                           <TestDate>2009-11-10T08:49:49</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>6</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2009-11-10T23:22:29</TestDate>
                           <Status>Success</Status>
                           <TotalFailures>0</TotalFailures>
                           <TotalSuccess>6</TotalSuccess>
@@ -180,7 +228,21 @@ Execution time: 0.74ms</Message>
                               <ConsoleOutput />
                               <ConsoleError />
                             </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 0.72ms</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
                           </Results>
+                          <Tests />
                         </TestRecord>
                         <TestRecord Name="Roll6D4">
                           <Results>
@@ -223,7 +285,21 @@ Execution time: 0.07ms</Message>
                               <ConsoleOutput />
                               <ConsoleError />
                             </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 0.15ms</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
                           </Results>
+                          <Tests />
                         </TestRecord>
                         <TestRecord Name="RollComplexGroup">
                           <Results>
@@ -261,7 +337,25 @@ Sample roll: 90
 </ConsoleOutput>
                               <ConsoleError />
                             </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                              <ConsoleOutput>Input dice spec: 'd%+3-(2*1d4/(1d6))'
+Parsed dice spec: '1d100+3-(2*1d4/(1d6))'
+Min: -4, Max: 102.66666666666666666666666667, Mean (average): 52.071428571428571428571428571
+Sample roll: 30.0
+</ConsoleOutput>
+                              <ConsoleError />
+                            </UnitTestResult>
                           </Results>
+                          <Tests />
                         </TestRecord>
                         <TestRecord Name="RollWithDiscardLowest">
                           <Results>
@@ -291,7 +385,21 @@ Execution time: 0.84ms</Message>
                               <ConsoleOutput />
                               <ConsoleError />
                             </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 0.99ms</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
                           </Results>
+                          <Tests />
                         </TestRecord>
                         <TestRecord Name="RollWithRollAgain">
                           <Results>
@@ -321,7 +429,21 @@ Execution time: 0.40ms</Message>
                               <ConsoleOutput />
                               <ConsoleError />
                             </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 0.40ms</Message>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
                           </Results>
+                          <Tests />
                         </TestRecord>
                         <TestRecord Name="TestDiablo">
                           <Results>
@@ -363,7 +485,27 @@ Result: 12
 </ConsoleOutput>
                               <ConsoleError />
                             </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 0.02ms</Message>
+                              <ConsoleOutput>Result: 14
+Result: 10
+Result: 12
+Result: 10
+Result: 11
+Result: 8
+</ConsoleOutput>
+                              <ConsoleError />
+                            </UnitTestResult>
                           </Results>
+                          <Tests />
                         </TestRecord>
                       </Tests>
                     </TestRecord>
@@ -385,6 +527,14 @@ Result: 12
                           <TotalIgnored>0</TotalIgnored>
                           <Time />
                         </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2009-11-10T23:22:29</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>43</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                        </UnitTestResult>
                       </Results>
                       <Tests>
                         <TestRecord Name="TestMaths">
@@ -399,6 +549,14 @@ Result: 12
                             </UnitTestResult>
                             <UnitTestResult>
                               <TestDate>2009-11-10T08:49:49</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>25</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
                               <Status>Success</Status>
                               <TotalFailures>0</TotalFailures>
                               <TotalSuccess>25</TotalSuccess>
@@ -435,7 +593,21 @@ Execution time: 0.10ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.09ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestHighestDiceRolls2">
                               <Results>
@@ -465,7 +637,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestHighestDiceRolls3">
                               <Results>
@@ -495,7 +681,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestHighestDiceRolls4">
                               <Results>
@@ -525,7 +725,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestHighestDiceRolls5">
                               <Results>
@@ -555,7 +769,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls1">
                               <Results>
@@ -585,7 +813,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls2">
                               <Results>
@@ -615,7 +857,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls3">
                               <Results>
@@ -645,7 +901,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls4">
                               <Results>
@@ -675,7 +945,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLowestDiceRolls5">
                               <Results>
@@ -705,7 +989,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum1">
                               <Results>
@@ -735,7 +1033,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum2">
                               <Results>
@@ -765,7 +1077,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum3">
                               <Results>
@@ -795,7 +1121,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum4">
                               <Results>
@@ -825,7 +1165,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMaximum5">
                               <Results>
@@ -855,7 +1209,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean1">
                               <Results>
@@ -885,7 +1253,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean2">
                               <Results>
@@ -915,7 +1297,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean3">
                               <Results>
@@ -945,7 +1341,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean4">
                               <Results>
@@ -975,7 +1385,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMean5">
                               <Results>
@@ -1005,7 +1429,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMinimum1">
                               <Results>
@@ -1035,7 +1473,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMinimum2">
                               <Results>
@@ -1065,7 +1517,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMinimum3">
                               <Results>
@@ -1095,7 +1561,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMinimum4">
                               <Results>
@@ -1125,7 +1605,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestMinimum5">
                               <Results>
@@ -1155,7 +1649,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                           </Tests>
                         </TestRecord>
@@ -1177,6 +1685,14 @@ Execution time: 0.00ms</Message>
                               <TotalIgnored>0</TotalIgnored>
                               <Time />
                             </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>6</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
                           </Results>
                           <Tests>
                             <TestRecord Name="TestBrackets1">
@@ -1207,7 +1723,21 @@ Execution time: 0.01ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestBrackets2">
                               <Results>
@@ -1237,7 +1767,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLongGroup">
                               <Results>
@@ -1267,7 +1811,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyCloseBrackets1">
                               <Results>
@@ -1297,7 +1855,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyCloseBrackets2">
                               <Results>
@@ -1327,7 +1899,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyOpenBrackets">
                               <Results>
@@ -1357,7 +1943,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                           </Tests>
                         </TestRecord>
@@ -1379,6 +1979,14 @@ Execution time: 0.00ms</Message>
                               <TotalIgnored>0</TotalIgnored>
                               <Time />
                             </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>6</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
                           </Results>
                           <Tests>
                             <TestRecord Name="TestBrackets1">
@@ -1409,7 +2017,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestBrackets2">
                               <Results>
@@ -1439,7 +2061,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestLongGroup">
                               <Results>
@@ -1469,7 +2105,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyCloseBrackets1">
                               <Results>
@@ -1499,7 +2149,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyCloseBrackets2">
                               <Results>
@@ -1529,7 +2193,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="TestTooManyOpenBrackets">
                               <Results>
@@ -1559,7 +2237,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                           </Tests>
                         </TestRecord>
@@ -1575,6 +2267,14 @@ Execution time: 0.00ms</Message>
                             </UnitTestResult>
                             <UnitTestResult>
                               <TestDate>2009-11-10T08:49:49</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>6</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
                               <Status>Success</Status>
                               <TotalFailures>0</TotalFailures>
                               <TotalSuccess>6</TotalSuccess>
@@ -1611,7 +2311,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="MultiplicationAtStart">
                               <Results>
@@ -1641,7 +2355,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="NegativeDiceroll">
                               <Results>
@@ -1671,7 +2399,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="NegativeInteger">
                               <Results>
@@ -1701,7 +2443,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="PositiveDiceroll">
                               <Results>
@@ -1731,7 +2487,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="PositiveInteger">
                               <Results>
@@ -1761,7 +2531,21 @@ Execution time: 0.00ms</Message>
                                   <ConsoleOutput />
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput />
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                           </Tests>
                         </TestRecord>
@@ -1782,6 +2566,14 @@ Execution time: 0.00ms</Message>
                           <Status>Success</Status>
                           <TotalFailures>0</TotalFailures>
                           <TotalSuccess>3</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2009-11-10T23:22:29</TestDate>
+                          <Status>Success</Status>
+                          <TotalFailures>0</TotalFailures>
+                          <TotalSuccess>4</TotalSuccess>
                           <TotalIgnored>0</TotalIgnored>
                           <Time />
                         </UnitTestResult>
@@ -1887,6 +2679,14 @@ Execution time: 0.00ms</Message>
                             </UnitTestResult>
                             <UnitTestResult>
                               <TestDate>2009-11-10T08:49:49</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
                               <Status>Success</Status>
                               <TotalFailures>0</TotalFailures>
                               <TotalSuccess>1</TotalSuccess>
@@ -2118,7 +2918,25 @@ Overall result: -1
 </ConsoleOutput>
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput>Rolling 4 FUDGE dice.
+1 positive, 1 negative, 2 neutral
+Text result: [ ][-][+][ ]
+Overall result: 0
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                           </Tests>
                         </TestRecord>
@@ -2182,6 +3000,14 @@ Overall result: -1
                             </UnitTestResult>
                             <UnitTestResult>
                               <TestDate>2009-11-10T08:49:49</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>2</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
                               <Status>Success</Status>
                               <TotalFailures>0</TotalFailures>
                               <TotalSuccess>2</TotalSuccess>
@@ -2304,7 +3130,22 @@ Execution time: 0.00ms</Message>
 </ConsoleOutput>
                                   <ConsoleError />
                                 </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                                  <ConsoleOutput>13, 13, 15, 15, 11, 7
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
                               </Results>
+                              <Tests />
                             </TestRecord>
                             <TestRecord Name="Test3D6">
                               <Results>
@@ -2375,6 +3216,1755 @@ Execution time: 0.10ms</Message>
 
 Execution time: 0.01ms</Message>
                                   <ConsoleOutput>8, 10, 9, 12, 10, 12
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.11ms</Message>
+                                  <ConsoleOutput>10, 7, 4, 16, 7, 11
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                              </Results>
+                              <Tests />
+                            </TestRecord>
+                          </Tests>
+                        </TestRecord>
+                        <TestRecord Name="TestShadowrun4">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:18:48</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2009-11-10T23:22:29</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                            </UnitTestResult>
+                          </Results>
+                          <Tests>
+                            <TestRecord Name="TestRollingNormally">
+                              <Results>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:18:48</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.22ms</Message>
+                                  <ConsoleOutput>1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:29</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.09ms</Message>
+                                  <ConsoleOutput>3 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+5 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+5 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+5 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+5 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:22:39</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.17ms</Message>
+                                  <ConsoleOutput>2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+6 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+0 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:23:15</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.17ms</Message>
+                                  <ConsoleOutput>1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+5 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:23:40</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.17ms</Message>
+                                  <ConsoleOutput>2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:25:06</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.17ms</Message>
+                                  <ConsoleOutput>2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: Normal
+2 successes, glitch: Normal
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: Normal
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: Normal
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: Normal
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: Normal
+0 successes, glitch: Critical
+0 successes, glitch: Critical
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: Normal
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: Normal
+3 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: Normal
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: Normal
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: Normal
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: Normal
+0 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+0 successes, glitch: Critical
+1 successes, glitch: None
+1 successes, glitch: Normal
+3 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: Normal
+2 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+0 successes, glitch: None
+2 successes, glitch: Normal
+1 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:25:34</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.15ms</Message>
+                                  <ConsoleOutput>7 successes, glitch: None
+6 successes, glitch: None
+5 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+6 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: Normal
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+7 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+4 successes, glitch: None
+6 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+4 successes, glitch: None
+7 successes, glitch: None
+5 successes, glitch: None
+4 successes, glitch: None
+5 successes, glitch: None
+6 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+5 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: Normal
+5 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+7 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+6 successes, glitch: None
+5 successes, glitch: None
+0 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: Normal
+4 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+7 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+6 successes, glitch: None
+5 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+6 successes, glitch: None
+5 successes, glitch: None
+2 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+4 successes, glitch: None
+5 successes, glitch: None
+2 successes, glitch: None
+8 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+6 successes, glitch: None
+7 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+4 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+0 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+7 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+2 successes, glitch: None
+5 successes, glitch: None
+5 successes, glitch: None
+1 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+7 successes, glitch: None
+4 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+1 successes, glitch: None
+4 successes, glitch: None
+5 successes, glitch: None
+4 successes, glitch: None
+5 successes, glitch: None
+4 successes, glitch: None
+0 successes, glitch: None
+6 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+2 successes, glitch: None
+4 successes, glitch: None
+4 successes, glitch: None
+6 successes, glitch: None
+1 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+3 successes, glitch: None
+3 successes, glitch: None
+5 successes, glitch: None
+2 successes, glitch: None
+3 successes, glitch: None
+6 successes, glitch: None
+1 successes, glitch: None
+1 successes, glitch: None
+6 successes, glitch: None
+</ConsoleOutput>
+                                  <ConsoleError />
+                                </UnitTestResult>
+                              </Results>
+                            </TestRecord>
+                            <TestRecord Name="TestRollingWithEdge">
+                              <Results>
+                                <UnitTestResult>
+                                  <TestDate>2009-11-10T23:26:48</TestDate>
+                                  <Status>Success</Status>
+                                  <TotalFailures>0</TotalFailures>
+                                  <TotalSuccess>1</TotalSuccess>
+                                  <TotalIgnored>0</TotalIgnored>
+                                  <Time />
+                                  <Message>Test successful
+
+Execution time: 0.17ms</Message>
+                                  <ConsoleOutput>7 successes, glitch: None
+9 successes, glitch: None
+7 successes, glitch: None
+13 successes, glitch: None
+9 successes, glitch: None
+9 successes, glitch: None
+6 successes, glitch: None
+7 successes, glitch: None
+7 successes, glitch: None
+10 successes, glitch: None
+9 successes, glitch: None
+13 successes, glitch: None
+10 successes, glitch: None
+9 successes, glitch: None
+4 successes, glitch: None
+12 successes, glitch: None
+8 successes, glitch: None
+8 successes, glitch: None
+11 successes, glitch: None
+7 successes, glitch: None
+14 successes, glitch: None
+8 successes, glitch: None
+12 successes, glitch: None
+6 successes, glitch: None
+13 successes, glitch: None
+19 successes, glitch: None
+9 successes, glitch: None
+12 successes, glitch: None
+14 successes, glitch: None
+8 successes, glitch: None
+5 successes, glitch: None
+8 successes, glitch: None
+18 successes, glitch: None
+9 successes, glitch: None
+11 successes, glitch: None
+12 successes, glitch: None
+7 successes, glitch: None
+8 successes, glitch: None
+14 successes, glitch: None
+9 successes, glitch: None
+13 successes, glitch: None
+12 successes, glitch: None
+10 successes, glitch: None
+8 successes, glitch: None
+12 successes, glitch: None
+10 successes, glitch: None
+10 successes, glitch: None
+6 successes, glitch: None
+8 successes, glitch: None
+7 successes, glitch: None
+8 successes, glitch: None
+11 successes, glitch: None
+6 successes, glitch: None
+13 successes, glitch: None
+9 successes, glitch: None
+12 successes, glitch: None
+11 successes, glitch: None
+11 successes, glitch: None
+5 successes, glitch: None
+8 successes, glitch: None
+11 successes, glitch: None
+5 successes, glitch: None
+12 successes, glitch: None
+17 successes, glitch: None
+11 successes, glitch: None
+8 successes, glitch: None
+14 successes, glitch: None
+9 successes, glitch: None
+11 successes, glitch: None
+11 successes, glitch: None
+9 successes, glitch: None
+11 successes, glitch: None
+11 successes, glitch: None
+8 successes, glitch: None
+8 successes, glitch: None
+10 successes, glitch: None
+9 successes, glitch: None
+12 successes, glitch: None
+13 successes, glitch: None
+14 successes, glitch: None
+8 successes, glitch: None
+8 successes, glitch: None
+9 successes, glitch: None
+11 successes, glitch: None
+6 successes, glitch: None
+9 successes, glitch: None
+6 successes, glitch: None
+12 successes, glitch: None
+12 successes, glitch: None
+11 successes, glitch: None
+7 successes, glitch: None
+6 successes, glitch: None
+9 successes, glitch: None
+13 successes, glitch: None
+8 successes, glitch: None
+11 successes, glitch: None
+9 successes, glitch: None
+11 successes, glitch: None
+12 successes, glitch: None
+8 successes, glitch: None
+7 successes, glitch: None
+15 successes, glitch: None
+9 successes, glitch: None
+5 successes, glitch: None
+12 successes, glitch: None
+12 successes, glitch: None
+12 successes, glitch: None
+12 successes, glitch: None
+8 successes, glitch: None
+10 successes, glitch: None
+14 successes, glitch: None
+4 successes, glitch: None
+5 successes, glitch: None
+10 successes, glitch: None
+10 successes, glitch: None
+9 successes, glitch: None
+11 successes, glitch: None
+7 successes, glitch: None
+11 successes, glitch: None
+7 successes, glitch: None
+11 successes, glitch: None
+15 successes, glitch: None
+14 successes, glitch: None
+11 successes, glitch: None
+16 successes, glitch: None
+11 successes, glitch: None
+10 successes, glitch: None
+11 successes, glitch: None
+12 successes, glitch: None
+11 successes, glitch: None
+9 successes, glitch: None
+10 successes, glitch: None
+12 successes, glitch: None
+9 successes, glitch: None
+11 successes, glitch: None
+10 successes, glitch: None
+10 successes, glitch: None
+8 successes, glitch: None
+8 successes, glitch: None
+11 successes, glitch: None
+9 successes, glitch: None
+9 successes, glitch: None
+8 successes, glitch: None
+15 successes, glitch: None
+9 successes, glitch: None
+14 successes, glitch: None
+12 successes, glitch: None
+8 successes, glitch: None
+12 successes, glitch: None
+4 successes, glitch: None
+7 successes, glitch: None
+9 successes, glitch: None
+13 successes, glitch: None
+7 successes, glitch: None
+13 successes, glitch: None
+6 successes, glitch: None
+10 successes, glitch: None
+13 successes, glitch: None
+9 successes, glitch: None
+9 successes, glitch: None
+13 successes, glitch: None
+9 successes, glitch: None
+14 successes, glitch: None
+8 successes, glitch: None
+9 successes, glitch: None
+9 successes, glitch: None
+10 successes, glitch: None
+11 successes, glitch: None
+13 successes, glitch: None
+17 successes, glitch: None
+4 successes, glitch: None
+13 successes, glitch: None
+6 successes, glitch: None
+9 successes, glitch: None
+11 successes, glitch: None
+10 successes, glitch: None
+12 successes, glitch: None
+13 successes, glitch: None
+10 successes, glitch: None
+14 successes, glitch: None
+15 successes, glitch: None
+11 successes, glitch: None
+5 successes, glitch: None
+6 successes, glitch: None
+16 successes, glitch: None
+13 successes, glitch: None
+4 successes, glitch: None
+10 successes, glitch: None
+9 successes, glitch: None
+11 successes, glitch: None
+9 successes, glitch: None
+6 successes, glitch: None
+5 successes, glitch: None
+9 successes, glitch: None
+9 successes, glitch: None
+15 successes, glitch: None
+10 successes, glitch: None
+10 successes, glitch: None
+12 successes, glitch: None
+13 successes, glitch: None
 </ConsoleOutput>
                                   <ConsoleError />
                                 </UnitTestResult>
