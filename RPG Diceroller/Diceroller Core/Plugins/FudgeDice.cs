@@ -10,12 +10,15 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
       FUDGE_TEMPLATE                    = "{0}#1d3-2";
     
     #region fields
+    
     private int[] results;
     private int numberOfDice;
     private DiceSpecification diceSpec;
+    
     #endregion
     
     #region properties
+    
     public int NumberOfDice
     {
       get {
@@ -38,33 +41,21 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
     public int Negative
     {
       get {
-        if(results == null)
-        {
-          results = GetResults();
-        }
-        return getCount(results, -1);
+        return getCount(Results, -1);
       }
     }
     
     public int Neutral
     {
       get {
-        if(results == null)
-        {
-          results = GetResults();
-        }
-        return getCount(results, 0);
+        return getCount(Results, 0);
       }
     }
     
     public int Positive
     {
       get {
-        if(results == null)
-        {
-          results = GetResults();
-        }
-        return getCount(results, 1);
+        return getCount(Results, 1);
       }
     }
     
@@ -73,9 +64,7 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
       get {
         int output = 0;
         
-        Roll();
-        
-        foreach(int roll in results)
+        foreach(int roll in Results)
         {
           output += roll;
         }
@@ -84,14 +73,24 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
       }
     }
     
+    public int[] Results
+    {
+      get {
+        if(results == null)
+        {
+          results = rollDice();
+        }
+        
+        return results;
+      }
+    }
+    
     public string ResultText
     {
       get {
         System.Text.StringBuilder output = new System.Text.StringBuilder();
         
-        Roll();
-        
-        foreach(int roll in results)
+        foreach(int roll in Results)
         {
           output.Append(formatFudgeDie(roll));
         }
@@ -99,32 +98,20 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
         return output.ToString();
       }
     }
+    
     #endregion
     
     #region publicMethods
-    public int[] GetResults()
-    {
-      int[] output;
-      decimal[] tempOutput;
-      
-      tempOutput = diceSpec.Roll(CalculationMethod.Roll);
-      output = new int[tempOutput.Length];
-      
-      for(int i = 0; i < tempOutput.Length; i++)
-      {
-        output[i] = (int) tempOutput[i];
-      }
-      
-      return output;
-    }
     
     public void Roll()
     {
-      results = GetResults();
+      results = rollDice();
     }
+    
     #endregion
     
     #region privateMethods
+    
     private int getCount(int[] input, int countedValue)
     {
       int output = 0;
@@ -161,9 +148,28 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
       
       return String.Format("[{0}]", output);
     }
+    
+    private int[] rollDice()
+    {
+      return convertDecimalArray(diceSpec.Roll(CalculationMethod.Roll));
+    }
+    
+    private int[] convertDecimalArray(decimal[] input)
+    {
+      int[] output = new int[input.Length];
+      
+      for(int i = 0; i < input.Length; i++)
+      {
+        output[i] = (int) input[i];
+      }
+      
+      return output;
+    }
+    
     #endregion
     
     #region constructors
+    
     public FudgeDice()
     {
       results = null;
@@ -175,6 +181,7 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
     {
       NumberOfDice = dice;
     }
+    
     #endregion
   }
 }

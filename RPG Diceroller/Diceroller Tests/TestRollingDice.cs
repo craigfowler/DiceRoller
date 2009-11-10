@@ -16,7 +16,7 @@ namespace CraigFowler.Test.Gaming.Diceroller
       FILE_PATH = "/home/craig/projects/DiceRoller/doc/rollingOutput.csv";
 
     [Test]
-    public void Roll1()
+    public void Roll6D4()
     {
       string roll = "6d4", filePath = FILE_PATH;
       DiceSpecification spec = new DiceSpecification(roll);
@@ -31,7 +31,7 @@ namespace CraigFowler.Test.Gaming.Diceroller
     }
     
     [Test]
-    public void Roll2()
+    public void RollComplexGroup()
     {
       string roll = "d%+3-(2*1d4/(1d6))";
       DiceSpecification spec = new DiceSpecification(roll);
@@ -48,7 +48,7 @@ namespace CraigFowler.Test.Gaming.Diceroller
     }
     
     [Test]
-    public void Roll3()
+    public void RollWithRollAgain()
     {
       DiceSpecification spec = new DiceSpecification("9#d6");
       spec.RollAgainThreshold = 6;
@@ -71,13 +71,13 @@ namespace CraigFowler.Test.Gaming.Diceroller
     }
     
     [Test]
-    public void Roll4()
+    public void RollWithDiscardLowest()
     {
       string roll = "4d6";
       string strResult = String.Empty;
       DiceSpecification spec = new DiceSpecification(roll);
       
-      spec.TryGetDice().DiscardLowest = 1;
+      spec.GetDice().DiscardLowest = 1;
       
       for(int i = 0; i < NUMBER_OF_TRIES; i++)
       {
@@ -85,6 +85,29 @@ namespace CraigFowler.Test.Gaming.Diceroller
       }
       
       writeResultsToFile(strResult, FILE_PATH);
+    }
+    
+    [Test]
+    public void RollWithMinMaxResults()
+    {
+      string roll = "2d10";
+      string strResult = String.Empty;
+      DiceSpecification spec = new DiceSpecification(roll);
+      decimal result;
+      
+      spec.GetDice().RerollLowerThan = 2;
+      spec.GetDice().RerollHigherThan = 8;
+      
+      for(int i = 0; i < NUMBER_OF_TRIES; i++)
+      {
+        result = spec.RollOnce();
+        Assert.GreaterOrEqual(result, 4, "Minimum possible result");
+        Assert.LessOrEqual(result, 16, "Maximum possible result");
+        strResult += String.Format("{0}\n", result);
+      }
+      
+      writeResultsToFile(strResult, FILE_PATH);
+      
     }
 
     private void writeResultsToFile(string results, string path)
