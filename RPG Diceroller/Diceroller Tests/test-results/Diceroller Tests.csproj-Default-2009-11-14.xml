@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tests>
+    <TestRecord Name="CraigFowler">
+      <Tests>
+        <TestRecord Name="Test">
+          <Tests>
+            <TestRecord Name="Gaming">
+              <Tests>
+                <TestRecord Name="Diceroller">
+                  <Tests>
+                    <TestRecord Name="TestRollingDice">
+                      <Tests>
+                        <TestRecord Name="RollComplexGroup">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2009-11-14T11:48:26</TestDate>
+                              <Status>Success</Status>
+                              <TotalFailures>0</TotalFailures>
+                              <TotalSuccess>1</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>Test successful
+
+Execution time: 0.11ms</Message>
+                              <ConsoleOutput>Input dice spec: 'd%+3-(2*1d4/(1d6))'
+Parsed dice spec: '1d100+3-(2*1d4/(1d6))'
+Min: -4, Max: 102.66666666666666666666666667, Mean (average): 52.071428571428571428571428571
+Sample roll: 25.0
+</ConsoleOutput>
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>
