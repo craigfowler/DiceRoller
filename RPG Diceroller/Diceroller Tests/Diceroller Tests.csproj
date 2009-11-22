@@ -64,5 +64,6 @@
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-07-19.xml" />
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-11-09.xml" />
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-11-10.xml" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-11-14.xml" />
   </ItemGroup>
 </Project>

@@ -103,6 +103,28 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
       return successes;
     }
     
+    public override string ToString ()
+    {
+      int successes;
+      Shadowrun4Glitch glitch;
+      string output;
+      
+      successes = Successes(out glitch);
+      
+      if(glitch == Shadowrun4Glitch.None)
+      {
+        output = String.Format("{0} successes", successes);
+      }
+      else
+      {
+        output = String.Format("{0} successes, {1}!",
+                               successes,
+                               glitch == Shadowrun4Glitch.Normal? "glitch" : "critical glitch");
+      }
+      
+      return output;
+    }
+    
     private void countResults(decimal[] results, out int successes, out int ones)
     {
       successes = 0;

@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Commandline/EntryPoint.cs" ctype="Workbench">
     <Files>
-      <File FileName="Commandline/EntryPoint.cs" Line="38" Column="33" />
+      <File FileName="Commandline/EntryPoint.cs" Line="69" Column="39" />
       <File FileName="Diceroller Core/DomainObjects/DiceSpecification.cs" Line="8" Column="3" />
-      <File FileName="Diceroller Core/Plugins/FudgeDice.cs" Line="21" Column="5" />
-      <File FileName="Diceroller Core/Plugins/DnD3e.cs" Line="51" Column="5" />
+      <File FileName="Diceroller Core/Plugins/FudgeDice.cs" Line="1" Column="1" />
+      <File FileName="Diceroller Core/Plugins/DnD3e.cs" Line="62" Column="15" />
+      <File FileName="Diceroller Core/Plugins/Shadowrun4.cs" Line="126" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,18 +24,19 @@
         <State expanded="True">
           <Option id="ShowProjects" value="True" />
           <Option id="NestedNamespaces" value="False" />
+          <Option id="GroupByAccess" value="True" />
           <Option id="PublicApiOnly" value="True" />
           <Option id="GroupByType" value="True" />
-          <Option id="GroupByAccess" value="True" />
           <Node name="Commandline" expanded="True">
             <Node name="CraigFowler" expanded="True" />
-            <Node name="CraigFowler.Gaming.Diceroller.Commandline" expanded="True" />
+            <Node name="CraigFowler.Gaming.Diceroller.Commandline" expanded="True">
+              <Node name="CraigFowler.Gaming.Diceroller.Commandline.EntryPoint" selected="True" />
+            </Node>
           </Node>
           <Node name="Core" expanded="True">
+            <Node name="CraigFowler.Gaming.Diceroller.DomainActions" expanded="True" />
             <Node name="CraigFowler.Gaming.Diceroller.DomainObjects" expanded="True" />
-            <Node name="CraigFowler.Gaming.Diceroller.Plugins" expanded="True">
-              <Node name="CraigFowler.Gaming.Diceroller.Plugins.Shadowrun4" expanded="True" />
-            </Node>
+            <Node name="CraigFowler.Gaming.Diceroller.Plugins" expanded="True" />
           </Node>
         </State>
       </Pad>

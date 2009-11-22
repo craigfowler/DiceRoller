@@ -95,7 +95,7 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
           output.Append(formatFudgeDie(roll));
         }
         
-        return output.ToString();
+        return String.Format("{0} = {1}", output.ToString(), Overall);
       }
     }
     

@@ -40,7 +40,9 @@
     <Folder Include="Plugins\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DomainObjects\DiceSpecification.cs" />
+    <Compile Include="DomainObjects\DiceSpecification.cs">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+    </Compile>
     <Compile Include="DomainObjects\DiceGroup.cs" />
     <Compile Include="DomainObjects\DiceGroupOperator.cs" />
     <Compile Include="DomainObjects\CalculationMethod.cs" />

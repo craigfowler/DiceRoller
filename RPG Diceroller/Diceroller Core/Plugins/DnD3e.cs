@@ -22,7 +22,7 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
     
     /// <value>
     /// Rerolls any individual die that comes up less than this number.
-    /// Must be between one and six, or null. Default is null (no rerolling).
+    /// Must be between one and five, or null. Default is null (no rerolling).
     /// </value>
     public int? DieRerollThreshold
     {
@@ -118,6 +118,20 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
       
       return convertDecimalArray(statsSpec.Roll());
     }
+    
+    public override string ToString ()
+    {
+      int[] results = RollStats();
+      
+      return string.Format("{0}, {1}, {2}, {3}, {4}, {5}",
+                           results[0],
+                           results[1],
+                           results[2],
+                           results[3],
+                           results[4],
+                           results[5]);
+    }
+
     
     #endregion
     
