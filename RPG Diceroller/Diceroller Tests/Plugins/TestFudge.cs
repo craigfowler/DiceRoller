@@ -16,7 +16,9 @@ namespace CraigFowler.Test.Gaming.Diceroller.Plugins
       
       Assert.AreEqual(4, roller.NumberOfDice, "Number of dice");
       output = roller.ResultText;
-      Assert.AreEqual(12, output.Length);
+      
+      Assert.GreaterOrEqual(output.Length, 16);
+      Assert.LessOrEqual(output.Length, 17);
       
       Console.WriteLine("Rolling {0} FUDGE dice.\n" +
                         "{1} positive, {2} negative, {3} neutral\n" +

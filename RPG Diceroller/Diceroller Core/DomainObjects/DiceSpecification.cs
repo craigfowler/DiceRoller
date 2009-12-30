@@ -51,7 +51,7 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
     
     private string specificationString;
     int numberOfRolls;
-    decimal?
+    Nullable<decimal>
       rerollLowerThan,
       rerollHigherThan,
       explodingThreshold,
@@ -237,7 +237,7 @@ namespace CraigFowler.Gaming.Diceroller.DomainObjects
     {
       bool exit = false, enter, first = true;
       int numDice, numSides;
-      DiceGroupOperator? oper;
+      Nullable<DiceGroupOperator> oper;
       DiceGroup parsedGroup;
       
       if(matches.Count > 1)

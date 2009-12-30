@@ -64,6 +64,13 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
       }
     }
     
+    protected int TotalDice
+    {
+      get {
+        return DicePool + EdgeUsed;
+      }
+    }
+    
     #endregion
     
     #region methods
@@ -76,7 +83,7 @@ namespace CraigFowler.Gaming.Diceroller.Plugins
       if(Specification == null)
       {
         Specification = new DiceSpecification("d6");
-        Specification.NumberOfRolls = DicePool + EdgeUsed;
+        Specification.NumberOfRolls = TotalDice;
         if(RuleOfSix)
         {
           Specification.RollAgainThreshold = 6;
