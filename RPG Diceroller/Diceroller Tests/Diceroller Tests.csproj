@@ -22,10 +22,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.core, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
-      <Package>nunit-2.4</Package>
+      <Package>nunit</Package>
     </Reference>
     <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
-      <Package>nunit-2.4</Package>
+      <Package>nunit</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -65,5 +65,6 @@
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-11-09.xml" />
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-11-10.xml" />
     <None Include="test-results\Diceroller Tests.csproj-Default-2009-11-14.xml" />
+    <None Include="test-results\Diceroller Tests.csproj-Default-2009-12-29.xml" />
   </ItemGroup>
 </Project>

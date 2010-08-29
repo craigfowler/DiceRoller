@@ -22,7 +22,7 @@ Core options
 ------------
   -P,--plugin                 Optional, the diceroller plugin to use (for
                               specialist dice rolls).  May be 'sr4', 'dndStats'
-                              or 'fudge'.
+                              or 'fudge' or 'enh'.
 
   -C,--calculation-method     Optional, the alternative calculation method to
                               use for this roll.  May be 'max', 'min', 'mean',
@@ -136,6 +136,9 @@ Dice specifications
           break;
         case "fudge":
           output = rollFudgeDice(parameters);
+          break;
+        case "enh":
+          output = rollEnhDice(parameters);
           break;
         default:
           throw new NotSupportedException("Unsupported plugin");
@@ -356,6 +359,25 @@ Dice specifications
       return String.Format("{0} = [{1}]",
                            roller.ToString(),
                            output);
+    }
+    
+    private static string rollEnhDice(CommandlineParameterProcessor parameters)
+    {
+      Enh roller;
+      int result;
+      bool fumble, threeSixes;
+      
+      if(parameters.RemainingText.Length == 1)
+      {
+        roller = new Enh();
+        result = roller.RollEnh(Int32.Parse(parameters.RemainingText[0]), out fumble, out threeSixes);
+      }
+      else
+      {
+        throw new ArgumentOutOfRangeException("parameters", "Incorrect number of parameters.");
+      }
+      
+      return String.Format("Total result: {0}\nFumble:       {1}\nThree sixes:  {2}\n", result, fumble, threeSixes);
     }
     
     #endregion

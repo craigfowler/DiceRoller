@@ -52,5 +52,6 @@
     <Compile Include="Plugins\DnD3eRollingMethod.cs" />
     <Compile Include="Plugins\Shadowrun4.cs" />
     <Compile Include="Plugins\Shadowrun4Glitch.cs" />
+    <Compile Include="Plugins\Enh.cs" />
   </ItemGroup>
 </Project>
